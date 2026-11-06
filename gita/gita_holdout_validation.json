@@ -1,0 +1,75 @@
+{
+  "n_questions": 40,
+  "by_category": {
+    "citation_lookup": 8,
+    "factual": 8,
+    "conceptual": 8,
+    "purport": 8,
+    "terminology": 8
+  },
+  "by_difficulty": {
+    "easy": 10,
+    "medium": 18,
+    "hard": 12
+  },
+  "by_gold_section": {
+    "translation_only": 29,
+    "purport_only": 11
+  },
+  "n_multiple_gold_source_objects": 0,
+  "citation_question_ids": [
+    "gita_holdout_001",
+    "gita_holdout_002",
+    "gita_holdout_003",
+    "gita_holdout_004",
+    "gita_holdout_005",
+    "gita_holdout_006",
+    "gita_holdout_007",
+    "gita_holdout_008"
+  ],
+  "n_citation_questions": 8,
+  "chapters_represented": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "questions_or_gold_objects_per_chapter": {
+    "1": 1,
+    "2": 2,
+    "3": 4,
+    "4": 3,
+    "5": 2,
+    "6": 4,
+    "7": 3,
+    "8": 3,
+    "9": 2,
+    "10": 2,
+    "11": 2,
+    "12": 2,
+    "13": 2,
+    "14": 1,
+    "15": 1,
+    "16": 1,
+    "17": 3,
+    "18": 2
+  },
+  "old_gold_source_reuse": [],
+  "n_issues": 0,
+  "issues": [],
+  "frozen_before_retrieval": true
+}

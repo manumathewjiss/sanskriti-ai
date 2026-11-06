@@ -1,0 +1,455 @@
+{
+  "set_label": "development_30",
+  "scientific_status": "development_or_error_analysis_not_untouched_holdout",
+  "n_questions": 30,
+  "eval_sha256": "8da7a3ed170cdf995401e17c7481a61174b61e4e5cc5583c4282c745deaf6c27",
+  "intent_counts": {
+    "translation": 3,
+    "neutral": 20,
+    "purport": 7
+  },
+  "e5": {
+    "source_level": {
+      "recall@1": 0.7,
+      "recall@5": 0.8333333333333334,
+      "recall@10": 0.9666666666666667,
+      "mrr@10": 0.7729100529100529,
+      "n": 30
+    },
+    "chunk_level": {
+      "recall@1": 0.6,
+      "recall@5": 0.7666666666666667,
+      "recall@10": 0.8,
+      "mrr@10": 0.6759259259259259,
+      "n": 30
+    }
+  },
+  "section_aware": {
+    "source_level": {
+      "recall@1": 0.7,
+      "recall@5": 0.8333333333333334,
+      "recall@10": 0.9666666666666667,
+      "mrr@10": 0.7673544973544973,
+      "n": 30
+    },
+    "chunk_level": {
+      "recall@1": 0.6666666666666666,
+      "recall@5": 0.8,
+      "recall@10": 0.8333333333333334,
+      "mrr@10": 0.7203703703703703,
+      "n": 30
+    }
+  },
+  "exact_chunk_improved_ids": [
+    "gita_eval_002",
+    "gita_eval_025"
+  ],
+  "exact_chunk_regressed_ids": [
+    "gita_eval_001"
+  ],
+  "source_regressed_ids": [
+    "gita_eval_001"
+  ],
+  "source_ok_exact_miss_then_fixed_ids": [
+    "gita_eval_002"
+  ],
+  "by_intent": {
+    "neutral": {
+      "n": 20,
+      "e5": {
+        "source_level": {
+          "recall@1": 0.7,
+          "recall@5": 0.8,
+          "recall@10": 1.0,
+          "mrr@10": 0.7676984126984128,
+          "n": 20
+        },
+        "chunk_level": {
+          "recall@1": 0.65,
+          "recall@5": 0.75,
+          "recall@10": 0.8,
+          "mrr@10": 0.6972222222222222,
+          "n": 20
+        }
+      },
+      "section_aware": {
+        "source_level": {
+          "recall@1": 0.7,
+          "recall@5": 0.8,
+          "recall@10": 1.0,
+          "mrr@10": 0.7676984126984128,
+          "n": 20
+        },
+        "chunk_level": {
+          "recall@1": 0.65,
+          "recall@5": 0.75,
+          "recall@10": 0.8,
+          "mrr@10": 0.6972222222222222,
+          "n": 20
+        }
+      }
+    },
+    "purport": {
+      "n": 7,
+      "e5": {
+        "source_level": {
+          "recall@1": 0.8571428571428571,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.9047619047619048,
+          "n": 7
+        },
+        "chunk_level": {
+          "recall@1": 0.7142857142857143,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.8333333333333333,
+          "n": 7
+        }
+      },
+      "section_aware": {
+        "source_level": {
+          "recall@1": 0.8571428571428571,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.9047619047619048,
+          "n": 7
+        },
+        "chunk_level": {
+          "recall@1": 0.8571428571428571,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.9047619047619048,
+          "n": 7
+        }
+      }
+    },
+    "translation": {
+      "n": 3,
+      "e5": {
+        "source_level": {
+          "recall@1": 0.3333333333333333,
+          "recall@5": 0.6666666666666666,
+          "recall@10": 0.6666666666666666,
+          "mrr@10": 0.5,
+          "n": 3
+        },
+        "chunk_level": {
+          "recall@1": 0.0,
+          "recall@5": 0.3333333333333333,
+          "recall@10": 0.3333333333333333,
+          "mrr@10": 0.16666666666666666,
+          "n": 3
+        }
+      },
+      "section_aware": {
+        "source_level": {
+          "recall@1": 0.3333333333333333,
+          "recall@5": 0.6666666666666666,
+          "recall@10": 0.6666666666666666,
+          "mrr@10": 0.4444444444444444,
+          "n": 3
+        },
+        "chunk_level": {
+          "recall@1": 0.3333333333333333,
+          "recall@5": 0.6666666666666666,
+          "recall@10": 0.6666666666666666,
+          "mrr@10": 0.4444444444444444,
+          "n": 3
+        }
+      }
+    }
+  },
+  "per_question_ranks": [
+    {
+      "id": "gita_eval_001",
+      "intent": "translation",
+      "cues": [
+        "dotted_citation:2.47"
+      ],
+      "e5_source": 2,
+      "sa_source": 3,
+      "e5_chunk": 2,
+      "sa_chunk": 3
+    },
+    {
+      "id": "gita_eval_002",
+      "intent": "translation",
+      "cues": [
+        "dotted_citation:18.66"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": null,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_eval_003",
+      "intent": "translation",
+      "cues": [
+        "dotted_citation:11.32"
+      ],
+      "e5_source": null,
+      "sa_source": null,
+      "e5_chunk": null,
+      "sa_chunk": null
+    },
+    {
+      "id": "gita_eval_004",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 3,
+      "sa_source": 3,
+      "e5_chunk": 3,
+      "sa_chunk": 3
+    },
+    {
+      "id": "gita_eval_005",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": null,
+      "sa_chunk": null
+    },
+    {
+      "id": "gita_eval_006",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 10,
+      "sa_source": 10,
+      "e5_chunk": null,
+      "sa_chunk": null
+    },
+    {
+      "id": "gita_eval_007",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 7,
+      "sa_source": 7,
+      "e5_chunk": null,
+      "sa_chunk": null
+    },
+    {
+      "id": "gita_eval_008",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_eval_009",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_eval_010",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_eval_011",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_eval_012",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_eval_013",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 2,
+      "sa_source": 2,
+      "e5_chunk": 2,
+      "sa_chunk": 2
+    },
+    {
+      "id": "gita_eval_014",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_eval_015",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_eval_016",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_eval_017",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 9,
+      "sa_source": 9,
+      "e5_chunk": 9,
+      "sa_chunk": 9
+    },
+    {
+      "id": "gita_eval_018",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 6,
+      "sa_source": 6,
+      "e5_chunk": null,
+      "sa_chunk": null
+    },
+    {
+      "id": "gita_eval_019",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_eval_020",
+      "intent": "purport",
+      "cues": [
+        "commentary"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_eval_021",
+      "intent": "purport",
+      "cues": [
+        "commentary"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_eval_022",
+      "intent": "purport",
+      "cues": [
+        "purport"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_eval_023",
+      "intent": "purport",
+      "cues": [
+        "commentary"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_eval_024",
+      "intent": "purport",
+      "cues": [
+        "commentary"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_eval_025",
+      "intent": "purport",
+      "cues": [
+        "commentary"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 2,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_eval_026",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_eval_027",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_eval_028",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_eval_029",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_eval_030",
+      "intent": "purport",
+      "cues": [
+        "commentary"
+      ],
+      "e5_source": 3,
+      "sa_source": 3,
+      "e5_chunk": 3,
+      "sa_chunk": 3
+    }
+  ]
+}

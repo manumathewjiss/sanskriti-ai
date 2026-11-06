@@ -1,0 +1,45 @@
+{
+  "n_source_records": 657,
+  "n_chunks": 1443,
+  "n_translation_chunks": 657,
+  "n_purport_chunks": 786,
+  "n_sources_with_purport": 625,
+  "n_sources_without_purport": 32,
+  "n_purports_unsplit": 510,
+  "n_purports_split": 115,
+  "max_purport_parts": 8,
+  "n_empty_text": 0,
+  "n_duplicate_chunk_ids": 0,
+  "n_missing_source_record_id": 0,
+  "n_traditional_verses_in_sources": 700,
+  "n_traditional_verses_in_chunks": 700,
+  "translation_chunks_minus_sources": 0,
+  "purport_body_word_stats": {
+    "n": 786,
+    "min": 17,
+    "median": 227,
+    "mean": 237.7,
+    "max": 420
+  },
+  "purport_full_text_word_stats": {
+    "n": 786,
+    "min": 21,
+    "median": 232,
+    "mean": 243.1,
+    "max": 428
+  },
+  "purport_body_word_buckets": {
+    "351-420": 186,
+    "200-350": 273,
+    "80-199": 256,
+    "<80": 71
+  },
+  "n_purport_body_over_420": 0,
+  "purport_body_over_420": [],
+  "overlap_pairs_ok": 161,
+  "overlap_pairs_fail": 0,
+  "overlap_fail_examples": [],
+  "n_split_purports_checked_for_preservation": 115,
+  "n_purport_preservation_fail": 0,
+  "issues": []
+}

@@ -1,0 +1,232 @@
+{
+  "step": 14,
+  "pipeline": "saved Step 13 E5 Top 5 -> same context construction -> ollama qwen2.5:3b -> citation validation",
+  "retriever": "plain_e5_frozen_saved_top5",
+  "e5_model": "intfloat/multilingual-e5-large",
+  "e5_faiss": "gita/gita_e5.faiss",
+  "e5_faiss_sha256": "37d700068b23111285aad0ad90fe012a0e98fba780ebcd41b7cade5110c21ec0",
+  "n_chunks": 1443,
+  "top_k": 5,
+  "did_not_rebuild_faiss": true,
+  "did_not_regenerate_embeddings": true,
+  "did_not_rerun_e5": true,
+  "did_not_rerun_flan": true,
+  "not_used": [
+    "bm25",
+    "rrf",
+    "citation_gating",
+    "section_aware",
+    "direct_verse_lookup",
+    "itihasa_lora",
+    "new_huggingface_llm"
+  ],
+  "ollama": {
+    "version": "0.33.0",
+    "model_tag": "qwen2.5:3b",
+    "model_id": "357c53fb659c",
+    "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+    "parameters": "3.1B",
+    "quantization": "Q4_K_M",
+    "size_on_disk": "1.9 GB",
+    "loaded_size_observed": "~2.2 GB",
+    "context_length_model": 32768,
+    "num_ctx_used": 8192,
+    "metal_gpu_verified": true,
+    "verification": "ollama ps after Step 14 run: PROCESSOR 100% GPU, CONTEXT 8192"
+  },
+  "generation_settings": {
+    "model": "qwen2.5:3b",
+    "provider": "ollama",
+    "temperature": 0,
+    "num_predict": 512,
+    "num_ctx": 8192,
+    "seed": 0,
+    "top_p": null
+  },
+  "context_window": {
+    "all_top5_supplied_for_all_10": true,
+    "any_input_truncation": false,
+    "max_prompt_eval_count": 2810,
+    "num_ctx": 8192,
+    "note": "All 10 prompts fit with 5/5 evidence blocks. No truncation."
+  },
+  "manual_evaluation": {
+    "method": "human labels on saved FLAN answers vs new Qwen answers. Same 10 questions. Same Top 5.",
+    "flan_source": "gita/gita_generation_smoke_results.json generated_answer",
+    "qwen_source": "gita/gita_generation_step14_qwen_results.json qwen_answer",
+    "per_question": [
+      {
+        "id": "smoke_001",
+        "gold_chunk_in_top5": "YES",
+        "all_top5_supplied": true,
+        "input_truncated": false,
+        "prompt_eval_count": 537,
+        "flan": {"correctness": "Wrong", "grounding": "Partially Grounded", "citation": "Missing", "section": "Wrong"},
+        "qwen": {"correctness": "Correct", "grounding": "Fully Grounded", "citation": "Correct", "section": "Correct"},
+        "notes": "FLAN copied 2.49. Qwen quoted 2.47 translation."
+      },
+      {
+        "id": "smoke_002",
+        "gold_chunk_in_top5": "NO",
+        "all_top5_supplied": true,
+        "input_truncated": false,
+        "prompt_eval_count": 1250,
+        "flan": {"correctness": "Wrong", "grounding": "Unsupported", "citation": "Missing", "section": "Not Applicable"},
+        "qwen": {"correctness": "Correct", "grounding": "Fully Grounded", "citation": "Correct", "section": "Wrong"},
+        "notes": "Gold translation not in Top 5. Qwen used 18.66 purport (rank 1): surrender and protection from sinful reactions. Presented as '18.66' without saying Purport."
+      },
+      {
+        "id": "smoke_003",
+        "gold_chunk_in_top5": "YES",
+        "all_top5_supplied": true,
+        "input_truncated": false,
+        "prompt_eval_count": 2022,
+        "flan": {"correctness": "Wrong", "grounding": "Unsupported", "citation": "Missing", "section": "Not Applicable"},
+        "qwen": {"correctness": "Correct", "grounding": "Fully Grounded", "citation": "Correct", "section": "Correct"},
+        "notes": "FLAN echoed prompt. Qwen used 9.26."
+      },
+      {
+        "id": "smoke_004",
+        "gold_chunk_in_top5": "YES",
+        "all_top5_supplied": true,
+        "input_truncated": false,
+        "prompt_eval_count": 597,
+        "flan": {"correctness": "Wrong", "grounding": "Unsupported", "citation": "Missing", "section": "Not Applicable"},
+        "qwen": {"correctness": "Correct", "grounding": "Fully Grounded", "citation": "Correct", "section": "Correct"},
+        "notes": "Qwen: lust, anger, greed from 16.21."
+      },
+      {
+        "id": "smoke_005",
+        "gold_chunk_in_top5": "YES",
+        "all_top5_supplied": true,
+        "input_truncated": false,
+        "prompt_eval_count": 1223,
+        "flan": {"correctness": "Wrong", "grounding": "Unsupported", "citation": "Missing", "section": "Not Applicable"},
+        "qwen": {"correctness": "Correct", "grounding": "Fully Grounded", "citation": "Correct", "section": "Correct"},
+        "notes": "Qwen used 6.5 and 6.6 translations."
+      },
+      {
+        "id": "smoke_006",
+        "gold_chunk_in_top5": "YES",
+        "all_top5_supplied": true,
+        "input_truncated": false,
+        "prompt_eval_count": 1015,
+        "flan": {"correctness": "Wrong", "grounding": "Unsupported", "citation": "Missing", "section": "Not Applicable"},
+        "qwen": {"correctness": "Correct", "grounding": "Fully Grounded", "citation": "Correct", "section": "Correct"},
+        "notes": "Qwen used 9.27."
+      },
+      {
+        "id": "smoke_007",
+        "gold_chunk_in_top5": "YES",
+        "all_top5_supplied": true,
+        "input_truncated": false,
+        "prompt_eval_count": 2810,
+        "flan": {"correctness": "Wrong", "grounding": "Unsupported", "citation": "Missing", "section": "Not Applicable"},
+        "qwen": {"correctness": "Partially Correct", "grounding": "Partially Grounded", "citation": "Missing", "section": "Correct"},
+        "notes": "Gold purport parts present. Qwen first said the commentary does not directly address the question, then gave the Narada example. No verse citation extracted."
+      },
+      {
+        "id": "smoke_008",
+        "gold_chunk_in_top5": "YES",
+        "all_top5_supplied": true,
+        "input_truncated": false,
+        "prompt_eval_count": 2420,
+        "flan": {"correctness": "Partially Correct", "grounding": "Partially Grounded", "citation": "Missing", "section": "Not Applicable"},
+        "qwen": {"correctness": "Correct", "grounding": "Fully Grounded", "citation": "Correct", "section": "Correct"},
+        "notes": "FLAN: 'a deer' only. Qwen: Maharaja Bharata, last thought a deer, next body a deer, purport of 8.6."
+      },
+      {
+        "id": "smoke_009",
+        "gold_chunk_in_top5": "YES",
+        "all_top5_supplied": true,
+        "input_truncated": false,
+        "prompt_eval_count": 2010,
+        "flan": {"correctness": "Wrong", "grounding": "Unsupported", "citation": "Missing", "section": "Not Applicable"},
+        "qwen": {"correctness": "Correct", "grounding": "Fully Grounded", "citation": "Correct", "section": "Correct"},
+        "notes": "Qwen used 8.3 karma definition."
+      },
+      {
+        "id": "smoke_010",
+        "gold_chunk_in_top5": "YES",
+        "all_top5_supplied": true,
+        "input_truncated": false,
+        "prompt_eval_count": 1248,
+        "flan": {"correctness": "Wrong", "grounding": "Partially Grounded", "citation": "Missing", "section": "Wrong"},
+        "qwen": {"correctness": "Wrong", "grounding": "Unsupported", "citation": "Missing", "section": "Not Applicable"},
+        "notes": "18.2 translation was rank 1 and defines sannyasa vs tyaga. Qwen claimed the evidence does not distinguish them. Generation failure, not retrieval or context-limit."
+      }
+    ],
+    "counts": {
+      "flan": {
+        "correct": 0,
+        "partially_correct": 1,
+        "wrong": 9,
+        "fully_grounded": 0,
+        "partially_grounded": 2,
+        "unsupported": 8,
+        "citation_correct": 0,
+        "citation_partial": 0,
+        "citation_missing": 10,
+        "citation_unsupported": 0,
+        "section_correct": 0,
+        "insufficient_context_refusal": false
+      },
+      "qwen": {
+        "correct": 8,
+        "partially_correct": 1,
+        "wrong": 1,
+        "fully_grounded": 8,
+        "partially_grounded": 1,
+        "unsupported": 1,
+        "citation_correct": 8,
+        "citation_partial": 0,
+        "citation_missing": 2,
+        "citation_unsupported": 0,
+        "section_correct": 8,
+        "section_wrong": 1,
+        "section_na": 1,
+        "insufficient_context_refusal": true
+      }
+    }
+  },
+  "insufficient_context_control": {
+    "question": "What does Bhagavad Gita 2.47 say?",
+    "forced_chunk_ids": ["1.46#translation", "16.21#translation", "11.3#translation"],
+    "qwen_said_insufficient": true,
+    "qwen_hallucinated_2_47_teaching": false,
+    "qwen_invented_unsupported_citation": false,
+    "qwen_answer": "The retrieved evidence is insufficient.",
+    "flan_said_insufficient": false
+  },
+  "failure_types": {
+    "retrieval": ["smoke_002 gold translation 18.66#translation not in Top 5 (18.66 purport was rank 1; Qwen still answered from purport)"],
+    "generation": ["smoke_010 refused despite 18.2 translation at rank 1", "smoke_007 hedged then answered Narada"],
+    "context_window": [],
+    "citation": ["smoke_007 MISSING", "smoke_010 MISSING", "smoke_002 cited 18.66 without Purport label"]
+  },
+  "sanity_checks": {
+    "same_10_questions": true,
+    "same_insufficient_context_control": true,
+    "same_saved_e5_top5": true,
+    "top5_ids_matched_step13_or_stop": true,
+    "same_e5_model": true,
+    "same_faiss": true,
+    "same_1443_chunks": true,
+    "no_embeddings_regenerated": true,
+    "no_retrieval_changes": true,
+    "no_bm25": true,
+    "no_rrf": true,
+    "no_citation_gating": true,
+    "no_section_rerank": true,
+    "no_direct_verse_lookup": true,
+    "no_rechunk": true,
+    "no_new_embedding_model": true,
+    "no_itihasa_lora": true,
+    "same_grounding_prompt_intent": true,
+    "only_primary_change_qwen2.5_3b": true,
+    "fixed_generation_parameters": true,
+    "citation_validation_performed": true,
+    "previous_artifacts_preserved": true
+  },
+  "scientific_note": "Generator comparison only. Not a retrieval re-evaluation. Parameters were not tuned after seeing answers."
+}

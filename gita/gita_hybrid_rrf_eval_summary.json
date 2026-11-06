@@ -1,0 +1,623 @@
+{
+  "method": "hybrid_rrf",
+  "rrf_k": 60,
+  "candidate_depth_per_retriever": 50,
+  "fusion_identity": "chunk_id",
+  "tie_break": "1) higher RRF score; 2) better E5 rank (missing loses); 3) better BM25 rank (missing loses); 4) lexicographic chunk_id",
+  "what_was_rerun": "Query-only E5 encode + FAISS search at depth 50 on the existing index. In-memory BM25Okapi over the same 1,443 chunk texts and Step-8 tokenizer. Corpus E5 embeddings were not regenerated. gita_e5.faiss was not rebuilt.",
+  "e5_model": "intfloat/multilingual-e5-large",
+  "e5_query_prefix": "query: ",
+  "e5_faiss": "IndexFlatIP reused",
+  "e5_faiss_sha256": "37d700068b23111285aad0ad90fe012a0e98fba780ebcd41b7cade5110c21ec0",
+  "bm25": "BM25Okapi + Step-8 tokenize (dotted verse IDs preserved)",
+  "n_chunks": 1443,
+  "top_k": 10,
+  "n_questions": 30,
+  "frozen_eval_sha256": "8da7a3ed170cdf995401e17c7481a61174b61e4e5cc5583c4282c745deaf6c27",
+  "scoring_rule": "Any valid gold source/chunk counts as the first hit. Not all golds need to appear. Missing from top-10 => 0 for that question.",
+  "source_level": {
+    "recall@1": 0.6666666666666666,
+    "recall@5": 0.8666666666666667,
+    "recall@10": 1.0,
+    "mrr@10": 0.7536507936507937,
+    "n": 30
+  },
+  "chunk_level": {
+    "recall@1": 0.5333333333333333,
+    "recall@5": 0.7666666666666667,
+    "recall@10": 0.8,
+    "mrr@10": 0.6114814814814815,
+    "n": 30
+  },
+  "source_level_by_category": {
+    "citation_lookup": {
+      "recall@1": 0.6,
+      "recall@5": 0.8,
+      "recall@10": 1.0,
+      "mrr@10": 0.67,
+      "n": 5
+    },
+    "conceptual": {
+      "recall@1": 0.42857142857142855,
+      "recall@5": 0.5714285714285714,
+      "recall@10": 1.0,
+      "mrr@10": 0.5561224489795918,
+      "n": 7
+    },
+    "factual": {
+      "recall@1": 0.5714285714285714,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr@10": 0.719047619047619,
+      "n": 7
+    },
+    "purport": {
+      "recall@1": 0.8333333333333334,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr@10": 0.8888888888888888,
+      "n": 6
+    },
+    "terminology": {
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr@10": 1.0,
+      "n": 5
+    }
+  },
+  "source_level_by_difficulty": {
+    "easy": {
+      "recall@1": 0.5,
+      "recall@5": 0.8333333333333334,
+      "recall@10": 1.0,
+      "mrr@10": 0.6416666666666667,
+      "n": 6
+    },
+    "hard": {
+      "recall@1": 0.5714285714285714,
+      "recall@5": 0.7142857142857143,
+      "recall@10": 1.0,
+      "mrr@10": 0.657312925170068,
+      "n": 7
+    },
+    "medium": {
+      "recall@1": 0.7647058823529411,
+      "recall@5": 0.9411764705882353,
+      "recall@10": 1.0,
+      "mrr@10": 0.832843137254902,
+      "n": 17
+    }
+  },
+  "three_way_source_level": {
+    "recall@1": {
+      "e5": 0.7,
+      "bm25": 0.4666666666666667,
+      "hybrid_rrf": 0.6666666666666666
+    },
+    "recall@5": {
+      "e5": 0.8333333333333334,
+      "bm25": 0.6333333333333333,
+      "hybrid_rrf": 0.8666666666666667
+    },
+    "recall@10": {
+      "e5": 0.9666666666666667,
+      "bm25": 0.8333333333333334,
+      "hybrid_rrf": 1.0
+    },
+    "mrr@10": {
+      "e5": 0.7729100529100529,
+      "bm25": 0.5382804232804232,
+      "hybrid_rrf": 0.7536507936507937
+    }
+  },
+  "three_way_chunk_level": {
+    "recall@1": {
+      "e5": 0.6,
+      "bm25": 0.3333333333333333,
+      "hybrid_rrf": 0.5333333333333333
+    },
+    "recall@5": {
+      "e5": 0.7666666666666667,
+      "bm25": 0.5666666666666667,
+      "hybrid_rrf": 0.7666666666666667
+    },
+    "recall@10": {
+      "e5": 0.8,
+      "bm25": 0.7,
+      "hybrid_rrf": 0.8
+    },
+    "mrr@10": {
+      "e5": 0.6759259259259259,
+      "bm25": 0.4273544973544974,
+      "hybrid_rrf": 0.6114814814814815
+    }
+  },
+  "e5_baselines": {
+    "recall@1": 0.7,
+    "recall@5": 0.8333333333333334,
+    "recall@10": 0.9666666666666667,
+    "mrr@10": 0.7729100529100529,
+    "n": 30
+  },
+  "bm25_baselines": {
+    "recall@1": 0.4666666666666667,
+    "recall@5": 0.6333333333333333,
+    "recall@10": 0.8333333333333334,
+    "mrr@10": 0.5382804232804232,
+    "n": 30
+  },
+  "per_question_comparison": [
+    {
+      "id": "gita_eval_001",
+      "category": "citation_lookup",
+      "difficulty": "easy",
+      "e5_source_gold_rank": 2,
+      "bm25_source_gold_rank": 1,
+      "hybrid_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 2,
+      "bm25_chunk_gold_rank": 1,
+      "hybrid_chunk_gold_rank": 1,
+      "vs_e5": "first",
+      "vs_bm25": "tie",
+      "notes": [
+        "bm25_helped_vs_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_002",
+      "category": "citation_lookup",
+      "difficulty": "easy",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 9,
+      "hybrid_source_gold_rank": 1,
+      "e5_chunk_gold_rank": null,
+      "bm25_chunk_gold_rank": null,
+      "hybrid_chunk_gold_rank": 5,
+      "vs_e5": "tie",
+      "vs_bm25": "first",
+      "notes": [
+        "tie_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_003",
+      "category": "citation_lookup",
+      "difficulty": "easy",
+      "e5_source_gold_rank": null,
+      "bm25_source_gold_rank": 5,
+      "hybrid_source_gold_rank": 4,
+      "e5_chunk_gold_rank": null,
+      "bm25_chunk_gold_rank": 8,
+      "hybrid_chunk_gold_rank": null,
+      "vs_e5": "first",
+      "vs_bm25": "first",
+      "notes": [
+        "hybrid_recovered_e5_miss",
+        "bm25_helped_vs_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_004",
+      "category": "citation_lookup",
+      "difficulty": "medium",
+      "e5_source_gold_rank": 3,
+      "bm25_source_gold_rank": 10,
+      "hybrid_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 3,
+      "bm25_chunk_gold_rank": null,
+      "hybrid_chunk_gold_rank": 5,
+      "vs_e5": "first",
+      "vs_bm25": "first",
+      "notes": []
+    },
+    {
+      "id": "gita_eval_005",
+      "category": "citation_lookup",
+      "difficulty": "easy",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": null,
+      "hybrid_source_gold_rank": 10,
+      "e5_chunk_gold_rank": null,
+      "bm25_chunk_gold_rank": null,
+      "hybrid_chunk_gold_rank": null,
+      "vs_e5": "second",
+      "vs_bm25": "first",
+      "notes": [
+        "worse_than_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_006",
+      "category": "factual",
+      "difficulty": "medium",
+      "e5_source_gold_rank": 10,
+      "bm25_source_gold_rank": 8,
+      "hybrid_source_gold_rank": 5,
+      "e5_chunk_gold_rank": null,
+      "bm25_chunk_gold_rank": null,
+      "hybrid_chunk_gold_rank": null,
+      "vs_e5": "first",
+      "vs_bm25": "first",
+      "notes": [
+        "bm25_helped_vs_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_007",
+      "category": "factual",
+      "difficulty": "medium",
+      "e5_source_gold_rank": 7,
+      "bm25_source_gold_rank": 5,
+      "hybrid_source_gold_rank": 3,
+      "e5_chunk_gold_rank": null,
+      "bm25_chunk_gold_rank": null,
+      "hybrid_chunk_gold_rank": null,
+      "vs_e5": "first",
+      "vs_bm25": "first",
+      "notes": [
+        "bm25_helped_vs_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_008",
+      "category": "factual",
+      "difficulty": "easy",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "hybrid_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "hybrid_chunk_gold_rank": 1,
+      "vs_e5": "tie",
+      "vs_bm25": "tie",
+      "notes": [
+        "tie_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_009",
+      "category": "factual",
+      "difficulty": "medium",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "hybrid_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "hybrid_chunk_gold_rank": 1,
+      "vs_e5": "tie",
+      "vs_bm25": "tie",
+      "notes": [
+        "tie_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_010",
+      "category": "factual",
+      "difficulty": "medium",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "hybrid_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "hybrid_chunk_gold_rank": 1,
+      "vs_e5": "tie",
+      "vs_bm25": "tie",
+      "notes": [
+        "tie_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_011",
+      "category": "factual",
+      "difficulty": "easy",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 9,
+      "hybrid_source_gold_rank": 2,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 9,
+      "hybrid_chunk_gold_rank": 2,
+      "vs_e5": "second",
+      "vs_bm25": "first",
+      "notes": [
+        "worse_than_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_012",
+      "category": "factual",
+      "difficulty": "medium",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "hybrid_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "hybrid_chunk_gold_rank": 1,
+      "vs_e5": "tie",
+      "vs_bm25": "tie",
+      "notes": [
+        "tie_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_013",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "e5_source_gold_rank": 2,
+      "bm25_source_gold_rank": 7,
+      "hybrid_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 2,
+      "bm25_chunk_gold_rank": 7,
+      "hybrid_chunk_gold_rank": 1,
+      "vs_e5": "first",
+      "vs_bm25": "first",
+      "notes": []
+    },
+    {
+      "id": "gita_eval_014",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": null,
+      "hybrid_source_gold_rank": 8,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": null,
+      "hybrid_chunk_gold_rank": 9,
+      "vs_e5": "second",
+      "vs_bm25": "first",
+      "notes": [
+        "worse_than_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_015",
+      "category": "conceptual",
+      "difficulty": "hard",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": null,
+      "hybrid_source_gold_rank": 8,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": null,
+      "hybrid_chunk_gold_rank": null,
+      "vs_e5": "second",
+      "vs_bm25": "first",
+      "notes": [
+        "worse_than_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_016",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 3,
+      "hybrid_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 3,
+      "hybrid_chunk_gold_rank": 1,
+      "vs_e5": "tie",
+      "vs_bm25": "first",
+      "notes": [
+        "tie_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_017",
+      "category": "conceptual",
+      "difficulty": "hard",
+      "e5_source_gold_rank": 9,
+      "bm25_source_gold_rank": null,
+      "hybrid_source_gold_rank": 7,
+      "e5_chunk_gold_rank": 9,
+      "bm25_chunk_gold_rank": null,
+      "hybrid_chunk_gold_rank": null,
+      "vs_e5": "first",
+      "vs_bm25": "first",
+      "notes": []
+    },
+    {
+      "id": "gita_eval_018",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "e5_source_gold_rank": 6,
+      "bm25_source_gold_rank": 8,
+      "hybrid_source_gold_rank": 2,
+      "e5_chunk_gold_rank": null,
+      "bm25_chunk_gold_rank": 8,
+      "hybrid_chunk_gold_rank": 3,
+      "vs_e5": "first",
+      "vs_bm25": "first",
+      "notes": []
+    },
+    {
+      "id": "gita_eval_019",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": null,
+      "hybrid_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": null,
+      "hybrid_chunk_gold_rank": 3,
+      "vs_e5": "tie",
+      "vs_bm25": "first",
+      "notes": [
+        "tie_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_020",
+      "category": "purport",
+      "difficulty": "medium",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "hybrid_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 5,
+      "hybrid_chunk_gold_rank": 3,
+      "vs_e5": "tie",
+      "vs_bm25": "tie",
+      "notes": [
+        "tie_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_021",
+      "category": "purport",
+      "difficulty": "hard",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "hybrid_source_gold_rank": 3,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 2,
+      "hybrid_chunk_gold_rank": 3,
+      "vs_e5": "second",
+      "vs_bm25": "second",
+      "notes": [
+        "worse_than_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_022",
+      "category": "purport",
+      "difficulty": "hard",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "hybrid_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "hybrid_chunk_gold_rank": 1,
+      "vs_e5": "tie",
+      "vs_bm25": "tie",
+      "notes": [
+        "tie_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_023",
+      "category": "purport",
+      "difficulty": "hard",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 2,
+      "hybrid_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 2,
+      "hybrid_chunk_gold_rank": 1,
+      "vs_e5": "tie",
+      "vs_bm25": "first",
+      "notes": [
+        "tie_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_024",
+      "category": "purport",
+      "difficulty": "medium",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "hybrid_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 4,
+      "hybrid_chunk_gold_rank": 1,
+      "vs_e5": "tie",
+      "vs_bm25": "tie",
+      "notes": [
+        "tie_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_025",
+      "category": "purport",
+      "difficulty": "medium",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "hybrid_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 2,
+      "bm25_chunk_gold_rank": 1,
+      "hybrid_chunk_gold_rank": 1,
+      "vs_e5": "tie",
+      "vs_bm25": "tie",
+      "notes": [
+        "tie_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_026",
+      "category": "terminology",
+      "difficulty": "medium",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "hybrid_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "hybrid_chunk_gold_rank": 1,
+      "vs_e5": "tie",
+      "vs_bm25": "tie",
+      "notes": [
+        "tie_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_027",
+      "category": "terminology",
+      "difficulty": "medium",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "hybrid_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "hybrid_chunk_gold_rank": 1,
+      "vs_e5": "tie",
+      "vs_bm25": "tie",
+      "notes": [
+        "tie_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_028",
+      "category": "terminology",
+      "difficulty": "medium",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "hybrid_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 3,
+      "hybrid_chunk_gold_rank": 1,
+      "vs_e5": "tie",
+      "vs_bm25": "tie",
+      "notes": [
+        "tie_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_029",
+      "category": "terminology",
+      "difficulty": "hard",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "hybrid_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "hybrid_chunk_gold_rank": 1,
+      "vs_e5": "tie",
+      "vs_bm25": "tie",
+      "notes": [
+        "tie_e5"
+      ]
+    },
+    {
+      "id": "gita_eval_030",
+      "category": "terminology",
+      "difficulty": "hard",
+      "e5_source_gold_rank": 3,
+      "bm25_source_gold_rank": 5,
+      "hybrid_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 3,
+      "bm25_chunk_gold_rank": 5,
+      "hybrid_chunk_gold_rank": 1,
+      "vs_e5": "first",
+      "vs_bm25": "first",
+      "notes": []
+    }
+  ]
+}

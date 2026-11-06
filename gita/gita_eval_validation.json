@@ -1,0 +1,41 @@
+{
+  "n_questions": 30,
+  "by_category": {
+    "citation_lookup": 5,
+    "factual": 7,
+    "conceptual": 7,
+    "purport": 6,
+    "terminology": 5
+  },
+  "by_difficulty": {
+    "easy": 6,
+    "medium": 17,
+    "hard": 7
+  },
+  "by_gold_section": {
+    "translation_only": 21,
+    "both": 2,
+    "purport_only": 7
+  },
+  "n_multiple_gold_source_objects": 5,
+  "chapters_represented": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    18
+  ],
+  "n_issues": 0,
+  "issues": []
+}

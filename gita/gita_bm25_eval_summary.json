@@ -1,0 +1,482 @@
+{
+  "method": "BM25Okapi",
+  "n_documents": 1443,
+  "top_k": 10,
+  "n_questions": 30,
+  "frozen_eval_sha256": "8da7a3ed170cdf995401e17c7481a61174b61e4e5cc5583c4282c745deaf6c27",
+  "tokenization": {
+    "description": "lowercase; bhagavad-gita -> bhagavad gita; keep dotted verse tokens (11.32, 1.16-18); split remaining on non-alphanumerics",
+    "examples": {
+      "naive_split_on_non_alphanumeric": {
+        "Bhagavad Gita 11.32": [
+          "bhagavad",
+          "gita",
+          "11",
+          "32"
+        ],
+        "Bhagavad-gita 11.32 — Translation": [
+          "bhagavad",
+          "gita",
+          "11",
+          "32",
+          "translation"
+        ],
+        "Bhagavad-gita 2.47 — Purport": [
+          "bhagavad",
+          "gita",
+          "2",
+          "47",
+          "purport"
+        ],
+        "Bhagavad-gita 1.16-18 — Translation": [
+          "bhagavad",
+          "gita",
+          "1",
+          "16",
+          "18",
+          "translation"
+        ],
+        "In Bhagavad Gita 11.32, how does Krishna describe Himself?": [
+          "in",
+          "bhagavad",
+          "gita",
+          "11",
+          "32",
+          "how",
+          "does",
+          "krishna",
+          "describe",
+          "himself"
+        ],
+        "What does Bhagavad Gita 2.47 say?": [
+          "what",
+          "does",
+          "bhagavad",
+          "gita",
+          "2",
+          "47",
+          "say"
+        ]
+      },
+      "this_baseline": {
+        "Bhagavad Gita 11.32": [
+          "bhagavad",
+          "gita",
+          "11.32"
+        ],
+        "Bhagavad-gita 11.32 — Translation": [
+          "bhagavad",
+          "gita",
+          "11.32",
+          "translation"
+        ],
+        "Bhagavad-gita 2.47 — Purport": [
+          "bhagavad",
+          "gita",
+          "2.47",
+          "purport"
+        ],
+        "Bhagavad-gita 1.16-18 — Translation": [
+          "bhagavad",
+          "gita",
+          "1.16-18",
+          "translation"
+        ],
+        "In Bhagavad Gita 11.32, how does Krishna describe Himself?": [
+          "in",
+          "bhagavad",
+          "gita",
+          "11.32",
+          "how",
+          "does",
+          "krishna",
+          "describe",
+          "himself"
+        ],
+        "What does Bhagavad Gita 2.47 say?": [
+          "what",
+          "does",
+          "bhagavad",
+          "gita",
+          "2.47",
+          "say"
+        ]
+      }
+    }
+  },
+  "scoring_rule": "Any valid gold source/chunk counts as the first hit. Not all golds need to appear. Missing from top-10 => 0 for that question.",
+  "source_level": {
+    "recall@1": 0.4666666666666667,
+    "recall@5": 0.6333333333333333,
+    "recall@10": 0.8333333333333334,
+    "mrr@10": 0.5382804232804232,
+    "n": 30
+  },
+  "chunk_level": {
+    "recall@1": 0.3333333333333333,
+    "recall@5": 0.5666666666666667,
+    "recall@10": 0.7,
+    "mrr@10": 0.4273544973544974,
+    "n": 30
+  },
+  "source_level_by_category": {
+    "citation_lookup": {
+      "recall@1": 0.2,
+      "recall@5": 0.4,
+      "recall@10": 0.8,
+      "mrr@10": 0.28222222222222226,
+      "n": 5
+    },
+    "conceptual": {
+      "recall@1": 0.0,
+      "recall@5": 0.14285714285714285,
+      "recall@10": 0.42857142857142855,
+      "mrr@10": 0.0858843537414966,
+      "n": 7
+    },
+    "factual": {
+      "recall@1": 0.5714285714285714,
+      "recall@5": 0.7142857142857143,
+      "recall@10": 1.0,
+      "mrr@10": 0.6337301587301587,
+      "n": 7
+    },
+    "purport": {
+      "recall@1": 0.8333333333333334,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr@10": 0.9166666666666666,
+      "n": 6
+    },
+    "terminology": {
+      "recall@1": 0.8,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr@10": 0.8400000000000001,
+      "n": 5
+    }
+  },
+  "source_level_by_difficulty": {
+    "easy": {
+      "recall@1": 0.3333333333333333,
+      "recall@5": 0.5,
+      "recall@10": 0.8333333333333334,
+      "mrr@10": 0.4037037037037037,
+      "n": 6
+    },
+    "hard": {
+      "recall@1": 0.42857142857142855,
+      "recall@5": 0.7142857142857143,
+      "recall@10": 0.7142857142857143,
+      "mrr@10": 0.5285714285714286,
+      "n": 7
+    },
+    "medium": {
+      "recall@1": 0.5294117647058824,
+      "recall@5": 0.6470588235294118,
+      "recall@10": 0.8823529411764706,
+      "mrr@10": 0.5897759103641457,
+      "n": 17
+    }
+  },
+  "e5_source_level": {
+    "recall@1": 0.7,
+    "recall@5": 0.8333333333333334,
+    "recall@10": 0.9666666666666667,
+    "mrr@10": 0.7729100529100529,
+    "n": 30
+  },
+  "e5_chunk_level": {
+    "recall@1": 0.6,
+    "recall@5": 0.7666666666666667,
+    "recall@10": 0.8,
+    "mrr@10": 0.6759259259259259,
+    "n": 30
+  },
+  "e5_source_level_by_category": {
+    "citation_lookup": {
+      "recall@1": 0.4,
+      "recall@5": 0.8,
+      "recall@10": 0.8,
+      "mrr@10": 0.5666666666666667,
+      "n": 5
+    },
+    "conceptual": {
+      "recall@1": 0.5714285714285714,
+      "recall@5": 0.7142857142857143,
+      "recall@10": 1.0,
+      "mrr@10": 0.6825396825396826,
+      "n": 7
+    },
+    "factual": {
+      "recall@1": 0.7142857142857143,
+      "recall@5": 0.7142857142857143,
+      "recall@10": 1.0,
+      "mrr@10": 0.7489795918367347,
+      "n": 7
+    },
+    "purport": {
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr@10": 1.0,
+      "n": 6
+    },
+    "terminology": {
+      "recall@1": 0.8,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr@10": 0.8666666666666666,
+      "n": 5
+    }
+  },
+  "source_rank_outcomes_vs_e5": {
+    "bm25_better": 3,
+    "e5_better": 8,
+    "bm25_only": 1,
+    "e5_only": 5,
+    "tie": 13
+  },
+  "per_question_comparison": [
+    {
+      "id": "gita_eval_001",
+      "category": "citation_lookup",
+      "e5_source_gold_rank": 2,
+      "bm25_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 2,
+      "bm25_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_002",
+      "category": "citation_lookup",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 9,
+      "e5_chunk_gold_rank": null,
+      "bm25_chunk_gold_rank": null
+    },
+    {
+      "id": "gita_eval_003",
+      "category": "citation_lookup",
+      "e5_source_gold_rank": null,
+      "bm25_source_gold_rank": 5,
+      "e5_chunk_gold_rank": null,
+      "bm25_chunk_gold_rank": 8
+    },
+    {
+      "id": "gita_eval_004",
+      "category": "citation_lookup",
+      "e5_source_gold_rank": 3,
+      "bm25_source_gold_rank": 10,
+      "e5_chunk_gold_rank": 3,
+      "bm25_chunk_gold_rank": null
+    },
+    {
+      "id": "gita_eval_005",
+      "category": "citation_lookup",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": null,
+      "e5_chunk_gold_rank": null,
+      "bm25_chunk_gold_rank": null
+    },
+    {
+      "id": "gita_eval_006",
+      "category": "factual",
+      "e5_source_gold_rank": 10,
+      "bm25_source_gold_rank": 8,
+      "e5_chunk_gold_rank": null,
+      "bm25_chunk_gold_rank": null
+    },
+    {
+      "id": "gita_eval_007",
+      "category": "factual",
+      "e5_source_gold_rank": 7,
+      "bm25_source_gold_rank": 5,
+      "e5_chunk_gold_rank": null,
+      "bm25_chunk_gold_rank": null
+    },
+    {
+      "id": "gita_eval_008",
+      "category": "factual",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_009",
+      "category": "factual",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_010",
+      "category": "factual",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_011",
+      "category": "factual",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 9,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 9
+    },
+    {
+      "id": "gita_eval_012",
+      "category": "factual",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_013",
+      "category": "conceptual",
+      "e5_source_gold_rank": 2,
+      "bm25_source_gold_rank": 7,
+      "e5_chunk_gold_rank": 2,
+      "bm25_chunk_gold_rank": 7
+    },
+    {
+      "id": "gita_eval_014",
+      "category": "conceptual",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": null,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": null
+    },
+    {
+      "id": "gita_eval_015",
+      "category": "conceptual",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": null,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": null
+    },
+    {
+      "id": "gita_eval_016",
+      "category": "conceptual",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 3,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 3
+    },
+    {
+      "id": "gita_eval_017",
+      "category": "conceptual",
+      "e5_source_gold_rank": 9,
+      "bm25_source_gold_rank": null,
+      "e5_chunk_gold_rank": 9,
+      "bm25_chunk_gold_rank": null
+    },
+    {
+      "id": "gita_eval_018",
+      "category": "conceptual",
+      "e5_source_gold_rank": 6,
+      "bm25_source_gold_rank": 8,
+      "e5_chunk_gold_rank": null,
+      "bm25_chunk_gold_rank": 8
+    },
+    {
+      "id": "gita_eval_019",
+      "category": "conceptual",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": null,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": null
+    },
+    {
+      "id": "gita_eval_020",
+      "category": "purport",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 5
+    },
+    {
+      "id": "gita_eval_021",
+      "category": "purport",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 2
+    },
+    {
+      "id": "gita_eval_022",
+      "category": "purport",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_023",
+      "category": "purport",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 2,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 2
+    },
+    {
+      "id": "gita_eval_024",
+      "category": "purport",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 4
+    },
+    {
+      "id": "gita_eval_025",
+      "category": "purport",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 2,
+      "bm25_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_026",
+      "category": "terminology",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_027",
+      "category": "terminology",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_028",
+      "category": "terminology",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 3
+    },
+    {
+      "id": "gita_eval_029",
+      "category": "terminology",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_030",
+      "category": "terminology",
+      "e5_source_gold_rank": 3,
+      "bm25_source_gold_rank": 5,
+      "e5_chunk_gold_rank": 3,
+      "bm25_chunk_gold_rank": 5
+    }
+  ]
+}

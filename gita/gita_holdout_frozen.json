@@ -1,0 +1,890 @@
+{
+  "status": "frozen",
+  "set_type": "held_out",
+  "purpose": "Held-out English retrieval evaluation. Created after Steps 7–10 used the original 30 questions for architecture decisions. Do not edit to fit retrieval results.",
+  "how_to_use": "The retrieval system must receive ONLY the 'question' field. Do not pass gold_sources, expected_answer_summary, or gold_evidence into the query.",
+  "do_not_edit_to_fit_retrieval_results": true,
+  "n_questions": 40,
+  "questions": [
+    {
+      "id": "gita_holdout_001",
+      "category": "citation_lookup",
+      "difficulty": "easy",
+      "question": "According to Bhagavad Gita 4.34, how should a person try to learn the truth?",
+      "gold_sources": [
+        {
+          "source_record_id": "4.34",
+          "chapter": 4,
+          "verse_start": 34,
+          "verse_end": 34,
+          "text_label": "TEXT 34",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "4.34#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "By approaching a spiritual master, asking submissively, and serving him; self-realized souls can give knowledge because they have seen the truth.",
+      "gold_evidence": "slation  Just try to learn the truth by approaching a spiritual master. Inquire from him submissively and render service unto him. The self-realized souls can impart knowledge unto you because they have seen the truth.",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_002",
+      "category": "citation_lookup",
+      "difficulty": "medium",
+      "question": "In Bhagavad Gita 6.35, what does Krishna say about controlling a restless mind?",
+      "gold_sources": [
+        {
+          "source_record_id": "6.35",
+          "chapter": 6,
+          "verse_start": 35,
+          "verse_end": 35,
+          "text_label": "TEXT 35",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "6.35#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "It is difficult to curb the restless mind, but it is possible by suitable practice and detachment.",
+      "gold_evidence": "y-armed son of Kunté, it is undoubtedly very difficult to curb the restless mind, but it is possible by suitable practice and by detachment.",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_003",
+      "category": "citation_lookup",
+      "difficulty": "easy",
+      "question": "What does Bhagavad Gita 7.7 say is superior to Krishna, and what image does He use for how everything rests on Him?",
+      "gold_sources": [
+        {
+          "source_record_id": "7.7",
+          "chapter": 7,
+          "verse_start": 7,
+          "verse_end": 7,
+          "text_label": "TEXT 7",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "7.7#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Nothing is superior to Krishna; everything rests on Him as pearls are strung on a thread.",
+      "gold_evidence": "lation  O conqueror of wealth, there is no truth superior to Me. Everything rests upon Me, as pearls are strung on a thread.",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_004",
+      "category": "citation_lookup",
+      "difficulty": "medium",
+      "question": "According to Bhagavad Gita 9.22, what does Krishna say He does for those who worship Him with exclusive devotion?",
+      "gold_sources": [
+        {
+          "source_record_id": "9.22",
+          "chapter": 9,
+          "verse_start": 22,
+          "verse_end": 22,
+          "text_label": "TEXT 22",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "9.22#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "He carries what they lack and preserves what they have.",
+      "gold_evidence": "ating on My transcendental form—to them I carry what they lack, and I preserve what they have.",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_005",
+      "category": "citation_lookup",
+      "difficulty": "easy",
+      "question": "What does Bhagavad Gita 10.8 say about Krishna as the source of the worlds?",
+      "gold_sources": [
+        {
+          "source_record_id": "10.8",
+          "chapter": 10,
+          "verse_start": 8,
+          "verse_end": 8,
+          "text_label": "TEXT 8",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "10.8#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "He is the source of all spiritual and material worlds; everything emanates from Him, and the wise who know this worship Him.",
+      "gold_evidence": "gavad-gita 10.8 — Translation  I am the source of all spiritual and material worlds. Everything emanates from Me. The wise who perfectly know this engage in My devotional service and worship Me with all their hearts.",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_006",
+      "category": "citation_lookup",
+      "difficulty": "easy",
+      "question": "According to Bhagavad Gita 12.8, where should a person fix the mind and intelligence?",
+      "gold_sources": [
+        {
+          "source_record_id": "12.8",
+          "chapter": 12,
+          "verse_start": 8,
+          "verse_end": 8,
+          "text_label": "TEXT 8",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "12.8#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Fix the mind on Krishna and engage intelligence in Him; then one will live in Him.",
+      "gold_evidence": "Bhagavad-gita 12.8 — Translation  Just fix your mind upon Me, the Supreme Personality of Godhead, and engage all your intelligence in Me. Thus you will live in Me always, without a doubt.",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_007",
+      "category": "citation_lookup",
+      "difficulty": "medium",
+      "question": "What does Bhagavad Gita 17.15 describe as austerity of speech?",
+      "gold_sources": [
+        {
+          "source_record_id": "17.15",
+          "chapter": 17,
+          "verse_start": 15,
+          "verse_end": 15,
+          "text_label": "TEXT 15",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "17.15#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Speaking words that are truthful, pleasing, beneficial, and not agitating others, and regularly reciting Vedic literature.",
+      "gold_evidence": "ech consists in speaking words that are truthful, pleasing, beneficial, and not agitating to others, and also in regularly reciting Vedic literature.",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_008",
+      "category": "citation_lookup",
+      "difficulty": "hard",
+      "question": "In Bhagavad Gita 18.61, how does Krishna describe the Supreme Lord in relation to living beings wandering in the world?",
+      "gold_sources": [
+        {
+          "source_record_id": "18.61",
+          "chapter": 18,
+          "verse_start": 61,
+          "verse_end": 61,
+          "text_label": "TEXT 61",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "18.61#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "The Supreme Lord sits in everyone’s heart and directs the wanderings of living beings, who are seated as on a machine made of material energy.",
+      "gold_evidence": "8.61 — Translation  The Supreme Lord is situated in everyone’s heart, O Arjuna, and is directing the wanderings of all living entities, who are seated as on a machine, made of the material energy.",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_009",
+      "category": "factual",
+      "difficulty": "easy",
+      "question": "At the end of the first chapter, what does Sanjaya say Arjuna did after speaking on the battlefield?",
+      "gold_sources": [
+        {
+          "source_record_id": "1.46",
+          "chapter": 1,
+          "verse_start": 46,
+          "verse_end": 46,
+          "text_label": "TEXT 46",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "1.46#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Arjuna threw down his bow and arrows and sat on the chariot, overwhelmed with grief.",
+      "gold_evidence": "having thus spoken on the battlefield, cast aside his bow and arrows and sat down on the chariot, his mind overwhelmed with grief.",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_010",
+      "category": "factual",
+      "difficulty": "medium",
+      "question": "What chain of inner reactions does the Gita say begins when a person keeps thinking about sense objects?",
+      "gold_sources": [
+        {
+          "source_record_id": "2.62",
+          "chapter": 2,
+          "verse_start": 62,
+          "verse_end": 62,
+          "text_label": "TEXT 62",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "2.62#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Contemplating sense objects produces attachment, attachment produces lust, and lust produces anger.",
+      "gold_evidence": "Bhagavad-gita 2.62 — Translation  While contemplating the objects of the senses, a person develops attachment for them, and from such attachment lust develops, and from lust anger arises.",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_011",
+      "category": "factual",
+      "difficulty": "medium",
+      "question": "If someone leaves the body at the end of life while remembering Krishna alone, what does the Gita say happens?",
+      "gold_sources": [
+        {
+          "source_record_id": "8.5",
+          "chapter": 8,
+          "verse_start": 5,
+          "verse_end": 5,
+          "text_label": "TEXT 5",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "8.5#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "That person at once attains Krishna’s nature; there is no doubt.",
+      "gold_evidence": "at the end of his life, quits his body, remembering Me alone, at once attains My nature. Of this there is no doubt.",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_012",
+      "category": "factual",
+      "difficulty": "medium",
+      "question": "Where does Krishna say He sits as the Supersoul, and how does He describe His relation to the beginning, middle, and end of all beings?",
+      "gold_sources": [
+        {
+          "source_record_id": "10.20",
+          "chapter": 10,
+          "verse_start": 20,
+          "verse_end": 20,
+          "text_label": "TEXT 20",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "10.20#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "He is the Supersoul in the hearts of all living beings, and He is their beginning, middle, and end.",
+      "gold_evidence": "nslation  I am the Supersoul, O Arjuna, seated in the hearts of all living entities. I am the beginning, the middle and the end of all beings.",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_013",
+      "category": "factual",
+      "difficulty": "easy",
+      "question": "After hearing Krishna describe Himself, what does Arjuna say he still wants to see about Krishna’s position in the universe?",
+      "gold_sources": [
+        {
+          "source_record_id": "11.3",
+          "chapter": 11,
+          "verse_start": 3,
+          "verse_end": 3,
+          "text_label": "TEXT 3",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "11.3#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Arjuna wants to see how Krishna has entered the cosmic manifestation—that form of His.",
+      "gold_evidence": "have described Yourself, I wish to see how You have entered into this cosmic manifestation. I want to see that form of Yours.",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_014",
+      "category": "factual",
+      "difficulty": "hard",
+      "question": "When Krishna lists items in the process of knowledge, does He include approaching a genuine spiritual teacher along with qualities like humility and nonviolence?",
+      "gold_sources": [
+        {
+          "source_record_id": "13.8-12",
+          "chapter": 13,
+          "verse_start": 8,
+          "verse_end": 12,
+          "text_label": "TEXTS 8–12",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "13.8-12#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Yes. The grouped verses list humility, pridelessness, nonviolence, and approaching a bona fide spiritual master among the process of knowledge.",
+      "gold_evidence": "ss; nonviolence; tolerance; simplicity; approaching a bona fide spiritual master; cleanliness; steadiness; self-control; renunciation of the objects of sense gratification; absence of false ego; the perception of the evil of birth, death, old age and disease;",
+      "notes": "Grouped TEXTS 8–12; use existing source_record_id 13.8-12."
+    },
+    {
+      "id": "gita_holdout_015",
+      "category": "factual",
+      "difficulty": "medium",
+      "question": "What does the Gita say happens to someone who serves Krishna in full devotion without fail, regarding the modes of nature?",
+      "gold_sources": [
+        {
+          "source_record_id": "14.26",
+          "chapter": 14,
+          "verse_start": 26,
+          "verse_end": 26,
+          "text_label": "TEXT 26",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "14.26#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "That person immediately transcends the modes and comes to the level of Brahman.",
+      "gold_evidence": "unfailing in all circumstances, at once transcends the modes of material nature and thus comes to the level of Brahman.",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_016",
+      "category": "factual",
+      "difficulty": "easy",
+      "question": "What three things does the Gita call gates leading to hell, which a sane person should give up?",
+      "gold_sources": [
+        {
+          "source_record_id": "16.21",
+          "chapter": 16,
+          "verse_start": 21,
+          "verse_end": 21,
+          "text_label": "TEXT 21",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "16.21#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Lust, anger, and greed are three gates to hell and should be given up.",
+      "gold_evidence": "re are three gates leading to this hell—lust, anger and greed. Every sane man should give these up, for they lead to the degradation of the soul.",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_017",
+      "category": "conceptual",
+      "difficulty": "hard",
+      "question": "Should a knowledgeable person try to make less informed workers quit their ordinary jobs, or is there a better way to help them?",
+      "gold_sources": [
+        {
+          "source_record_id": "3.26",
+          "chapter": 3,
+          "verse_start": 26,
+          "verse_end": 26,
+          "text_label": "TEXT 26",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "3.26#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "A learned person should not make ignorant workers stop; by working in devotion he should engage them in activities.",
+      "gold_evidence": "of prescribed duties, a learned person should not induce them to stop work. Rather, by working in the spirit of devotion, he should engage them in all sorts of activities [for the gradual development of Kåñëa consciousness].",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_018",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "question": "Is it safer, according to the Gita, to do someone else’s job perfectly than to do one’s own duty even if one does it imperfectly?",
+      "gold_sources": [
+        {
+          "source_record_id": "3.35",
+          "chapter": 3,
+          "verse_start": 35,
+          "verse_end": 35,
+          "text_label": "TEXT 35",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "3.35#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "No. One’s own duty done imperfectly is better; following another’s path is dangerous.",
+      "gold_evidence": "Bhagavad-gita 3.35 — Translation  It is far better to discharge one’s prescribed duties, even though faultily, than another’s duties perfectly. Destruction in the course of performing one’s own duty is better than engaging in another’s duties, for to follow an",
+      "notes": "Related later to 18.47, but this item golds the Chapter 3 statement."
+    },
+    {
+      "id": "gita_holdout_019",
+      "category": "conceptual",
+      "difficulty": "hard",
+      "question": "What kind of seeing does the Gita praise when it talks about noticing stillness inside activity, and activity inside apparent stillness?",
+      "gold_sources": [
+        {
+          "source_record_id": "4.18",
+          "chapter": 4,
+          "verse_start": 18,
+          "verse_end": 18,
+          "text_label": "TEXT 18",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "4.18#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "One who sees inaction in action and action in inaction is intelligent and transcendental even while active.",
+      "gold_evidence": "agavad-gita 4.18 — Translation  One who sees inaction in action, and action in inaction, is intelligent among men, and he is in the transcendental position, although engaged in all sorts of activities.",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_020",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "question": "How does true knowledge change the way a humble sage looks at a scholar, a cow, an elephant, a dog, and an outcaste?",
+      "gold_sources": [
+        {
+          "source_record_id": "5.18",
+          "chapter": 5,
+          "verse_start": 18,
+          "verse_end": 18,
+          "text_label": "TEXT 18",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "5.18#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "By true knowledge they see those beings with equal vision.",
+      "gold_evidence": "ble sages, by virtue of true knowledge, see with equal vision a learned and gentle brähmaëa, a cow, an elephant, a dog and a dog-eater [outcaste].",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_021",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "question": "Why would a wise person refuse to chase pleasures that come from the senses, even if those pleasures feel good for a while?",
+      "gold_sources": [
+        {
+          "source_record_id": "5.22",
+          "chapter": 5,
+          "verse_start": 22,
+          "verse_end": 22,
+          "text_label": "TEXT 22",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "5.22#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Sense pleasures are sources of misery, they begin and end, so the wise do not delight in them.",
+      "gold_evidence": "ligent person does not take part in the sources of misery, which are due to contact with the material senses. O son of Kunté, such pleasures have a beginning and an end, and so the wise man does not delight in them.",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_022",
+      "category": "conceptual",
+      "difficulty": "hard",
+      "question": "What makes someone a perfect yogi in how they relate to other people’s joy and pain, compared with their own?",
+      "gold_sources": [
+        {
+          "source_record_id": "6.32",
+          "chapter": 6,
+          "verse_start": 32,
+          "verse_end": 32,
+          "text_label": "TEXT 32",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "6.32#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "A perfect yogi sees others’ happiness and distress as equal to his own.",
+      "gold_evidence": "by comparison to his own self, sees the true equality of all beings, in both their happiness and their distress, O Arjuna!",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_023",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "question": "The Gita mentions two ways of leaving this world, one bright and one dark. What is the difference in what happens afterward?",
+      "gold_sources": [
+        {
+          "source_record_id": "8.26",
+          "chapter": 8,
+          "verse_start": 26,
+          "verse_end": 26,
+          "text_label": "TEXT 26",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "8.26#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Passing in light, one does not come back; passing in darkness, one returns.",
+      "gold_evidence": "are two ways of passing from this world—one in light and one in darkness. When one passes in light, he does not come back; but when one passes in darkness, he returns.",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_024",
+      "category": "conceptual",
+      "difficulty": "easy",
+      "question": "Can everyday acts like eating, giving, or performing austerity be turned into worship, according to the Gita?",
+      "gold_sources": [
+        {
+          "source_record_id": "9.27",
+          "chapter": 9,
+          "verse_start": 27,
+          "verse_end": 27,
+          "text_label": "TEXT 27",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "9.27#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Yes. Whatever one does, eats, offers, gives, or performs as austerity should be done as an offering to Krishna.",
+      "gold_evidence": "Bhagavad-gita 9.27 — Translation  Whatever you do, whatever you eat, whatever you offer or give away, and whatever austerities you perform—do that, O son of Kunté, as an offering to Me.",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_025",
+      "category": "purport",
+      "difficulty": "medium",
+      "question": "In the commentary about how ordinary people copy a great person’s example, why would a leader who smokes be a poor teacher of giving up smoking, and what title is given to a teacher who first behaves properly?",
+      "gold_sources": [
+        {
+          "source_record_id": "3.21",
+          "chapter": 3,
+          "verse_start": 21,
+          "verse_end": 21,
+          "text_label": "TEXT 21",
+          "section": "purport",
+          "gold_chunk_ids": [
+            "3.21#purport.1"
+          ]
+        }
+      ],
+      "expected_answer_summary": "A leader cannot teach the public to stop smoking if he smokes; one who behaves properly before teaching is called acarya.",
+      "gold_evidence": "or. A leader cannot teach the public to stop smoking if he himself smokes. Lord Caitanya said th at a teacher should behave properly before he begins teaching. One who teaches in that way is called äcärya, or the ideal teacher. Therefore, a teache r must follo",
+      "notes": "Smoking example and acarya label are purport-only."
+    },
+    {
+      "id": "gita_holdout_026",
+      "category": "purport",
+      "difficulty": "medium",
+      "question": "When the yoga commentary discusses regulating eating, what kind of food does it say a practitioner should become used to accepting?",
+      "gold_sources": [
+        {
+          "source_record_id": "6.17",
+          "chapter": 6,
+          "verse_start": 17,
+          "verse_end": 17,
+          "text_label": "TEXT 17",
+          "section": "purport",
+          "gold_chunk_ids": [
+            "6.17#purport.1"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Eating can be regulated when one practices accepting prasadam, sanctified food.",
+      "gold_evidence": "only when one is practiced to take and accept prasädam, san ctified food. Lord Kåñëa is offered, according to the Bhagavad-gétä ( 9.26), vegetables, flowers, fruits, grains, milk, etc. In this way, a person in Kåñëa consciousness becomes automatically trained",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_027",
+      "category": "purport",
+      "difficulty": "hard",
+      "question": "The commentary on the Lord’s covering energy says a bound person cannot free another bound person. Who does it say can actually release a conditioned soul?",
+      "gold_sources": [
+        {
+          "source_record_id": "7.14",
+          "chapter": 7,
+          "verse_start": 14,
+          "verse_end": 14,
+          "text_label": "TEXT 14",
+          "section": "purport",
+          "gold_chunk_ids": [
+            "7.14#purport.2"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Only Krishna or His bona fide representative the spiritual master can release the conditioned soul.",
+      "gold_evidence": "by a person who is unbound. Because the bound cannot help th e bound, the rescuer must be liberated. Therefore, only Lord Kåñëa,  or His bona fide representative the spiritual master, can release the conditioned soul. Without such superior help, one cannot be",
+      "notes": "Evidence is in purport part 2, not the short translation."
+    },
+    {
+      "id": "gita_holdout_028",
+      "category": "purport",
+      "difficulty": "hard",
+      "question": "What example does the commentary give of a king whose last thought was an animal, and what body did he get next?",
+      "gold_sources": [
+        {
+          "source_record_id": "8.6",
+          "chapter": 8,
+          "verse_start": 6,
+          "verse_end": 6,
+          "text_label": "TEXT 6",
+          "section": "purport",
+          "gold_chunk_ids": [
+            "8.6#purport.1"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Maharaja Bharata thought of a deer at death and was transferred into a deer’s body.",
+      "gold_evidence": "an one die in the proper state of mind? Mahäräja Bharata, although a great personality, thought of a deer at the end of his life, and s o in his next life he was transferred into the body of a deer. Although as a deer he remembered his past activities, he had",
+      "notes": "Bharata story is purport-only."
+    },
+    {
+      "id": "gita_holdout_029",
+      "category": "purport",
+      "difficulty": "medium",
+      "question": "When Krishna gives Arjuna special vision, does the commentary say a pure devotee prefers to see the two-handed form, or that the universal display is what devotees most want?",
+      "gold_sources": [
+        {
+          "source_record_id": "11.8",
+          "chapter": 11,
+          "verse_start": 8,
+          "verse_end": 8,
+          "text_label": "TEXT 8",
+          "section": "purport",
+          "gold_chunk_ids": [
+            "11.8#purport.1"
+          ]
+        }
+      ],
+      "expected_answer_summary": "A pure devotee prefers Krishna’s two-handed form; the universal form is not very important to such devotees.",
+      "gold_evidence": "ke to see Kå ñëa in any form except His form with two hands; a devotee must see His univer sal form by His grace, not with the mind but with spiritual eyes. To see the universal form of Kåñëa, Arjuna is told not to change his mind b ut his vision. The universa",
+      "notes": "Part 1 of the 11.8 purport."
+    },
+    {
+      "id": "gita_holdout_030",
+      "category": "purport",
+      "difficulty": "hard",
+      "question": "In the commentary that compares this world to an upside-down banyan, what is said to be the purpose of studying the Vedas?",
+      "gold_sources": [
+        {
+          "source_record_id": "15.1",
+          "chapter": 15,
+          "verse_start": 1,
+          "verse_end": 1,
+          "text_label": "TEXT 1",
+          "section": "purport",
+          "gold_chunk_ids": [
+            "15.1#purport.1"
+          ]
+        }
+      ],
+      "expected_answer_summary": "The purpose of Vedic study is to understand Krishna; one in Krishna consciousness already knows the Vedas.",
+      "gold_evidence": "t is explained in this chapter that the purpose of Vedic study is to understand Kåñëa. Therefore one who is in Kåñëa consciousness, who is engaged in devotional service, already knows the Vedas. The entanglement of this material world is compared here to a ban",
+      "notes": "Part 1 of the 15.1 purport."
+    },
+    {
+      "id": "gita_holdout_031",
+      "category": "purport",
+      "difficulty": "medium",
+      "question": "Does the commentary on charity in the mode of goodness recommend giving to anyone at random, including every poor person, as a spiritual rule?",
+      "gold_sources": [
+        {
+          "source_record_id": "17.20",
+          "chapter": 17,
+          "verse_start": 20,
+          "verse_end": 20,
+          "text_label": "TEXT 20",
+          "section": "purport",
+          "gold_chunk_ids": [
+            "17.20#purport.1"
+          ]
+        }
+      ],
+      "expected_answer_summary": "No. Vedic literature does not recommend indiscriminate charity; worthiness and spiritual consideration matter.",
+      "gold_evidence": "spiritual advancement. In other words, indiscriminate charity is not recommended in the Vedic literature.",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_032",
+      "category": "purport",
+      "difficulty": "hard",
+      "question": "In the long commentary on the process of knowledge, what does it say that process finally aims at, beyond listing qualities like humility?",
+      "gold_sources": [
+        {
+          "source_record_id": "13.8-12",
+          "chapter": 13,
+          "verse_start": 8,
+          "verse_end": 12,
+          "text_label": "TEXTS 8–12",
+          "section": "purport",
+          "gold_chunk_ids": [
+            "13.8-12#purport.1"
+          ]
+        }
+      ],
+      "expected_answer_summary": "The process of knowledge terminates in unalloyed devotional service to the Lord.",
+      "gold_evidence": "the process of knowledge term inates in unalloyed devotional service to the Lord. So if one does not approach, or is not able to approach, the transcendental service of the Lord, th en the other nineteen items are of no particular value. But if one t akes to d",
+      "notes": "Gold is purport part 1, not the whole seven-part split."
+    },
+    {
+      "id": "gita_holdout_033",
+      "category": "terminology",
+      "difficulty": "easy",
+      "question": "How does this Gita distinguish sannyasa, the renounced order, from tyaga, renunciation?",
+      "gold_sources": [
+        {
+          "source_record_id": "18.2",
+          "chapter": 18,
+          "verse_start": 2,
+          "verse_end": 2,
+          "text_label": "TEXT 2",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "18.2#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Sannyasa is giving up activities based on material desire; tyaga is giving up the results of all activities.",
+      "gold_evidence": "sire is what great learned men call the renounced order of life [sannyäsa]. And giving up the results of all activities is what the wise call renunciation [tyäga].",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_034",
+      "category": "terminology",
+      "difficulty": "easy",
+      "question": "What three words does this book say have been used from the beginning of creation to indicate the Supreme Absolute Truth?",
+      "gold_sources": [
+        {
+          "source_record_id": "17.23",
+          "chapter": 17,
+          "verse_start": 23,
+          "verse_end": 23,
+          "text_label": "TEXT 23",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "17.23#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Om tat sat.",
+      "gold_evidence": "beginning of creation, the three words oà tat sat were used to indicate the Supreme Absolute Truth. These three symbolic representations were used by brähmaëas while chanting the hymns of the Vedas and during sacrifices for the satisfaction of the Supreme.",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_035",
+      "category": "terminology",
+      "difficulty": "medium",
+      "question": "What does this Gita mean by samadhi when it describes yoga reaching a stage of trance?",
+      "gold_sources": [
+        {
+          "source_record_id": "6.20-23",
+          "chapter": 6,
+          "verse_start": 20,
+          "verse_end": 23,
+          "text_label": "TEXTS 20–23",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "6.20-23#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Samadhi is the yogic trance in which the mind is fully restrained from material mental activities and one sees and rejoices in the self.",
+      "gold_evidence": "tion  In the stage of perfection called trance, or samädhi, one’s mind is completely restrained from material mental activities by practice of yoga. This perfection is characterized by one’s ability to see the self by the pure mind and to relish and rejoice in",
+      "notes": "Grouped TEXTS 20–23."
+    },
+    {
+      "id": "gita_holdout_036",
+      "category": "terminology",
+      "difficulty": "medium",
+      "question": "When the Gita talks about work becoming a sacrifice for Vishnu, what does it say happens if work is not done that way?",
+      "gold_sources": [
+        {
+          "source_record_id": "3.9",
+          "chapter": 3,
+          "verse_start": 9,
+          "verse_end": 9,
+          "text_label": "TEXT 9",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "3.9#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Work done as a sacrifice for Vishnu frees one; otherwise work causes bondage.",
+      "gold_evidence": "-gita 3.9 — Translation  Work done as a sacrifice for Viñëu has to be performed, otherwise work causes bondage in this material world. Therefore, O son of Kunté, perform your prescribed duties for His satisfaction, and in that way you will always remain free f",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_037",
+      "category": "terminology",
+      "difficulty": "hard",
+      "question": "What does the commentary mean by maya when it describes the Lord’s covering energy as illusion that ties a person like ropes?",
+      "gold_sources": [
+        {
+          "source_record_id": "7.14",
+          "chapter": 7,
+          "verse_start": 14,
+          "verse_end": 14,
+          "text_label": "TEXT 14",
+          "section": "purport",
+          "gold_chunk_ids": [
+            "7.14#purport.2"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Maya is illusion, the Lord’s energy that tightly binds the conditioned soul; its background is the Lord as supreme magician.",
+      "gold_evidence": "vidyän mäyinaà tu maheçvaram. “Although mäyä [illusion] is false or temporary, the background of mäyä is the supreme magician, the Personality of Godhead, who is Maheçvara, the supreme controller.” ( Çvetäçvatara Upaniñad 4.10) Another meaning of guëa is rope;",
+      "notes": "The English/Sanskrit maya explanation is in purport part 2."
+    },
+    {
+      "id": "gita_holdout_038",
+      "category": "terminology",
+      "difficulty": "hard",
+      "question": "In the commentary on seeing action and inaction, what does akarma mean?",
+      "gold_sources": [
+        {
+          "source_record_id": "4.18",
+          "chapter": 4,
+          "verse_start": 18,
+          "verse_end": 18,
+          "text_label": "TEXT 18",
+          "section": "purport",
+          "gold_chunk_ids": [
+            "4.18#purport.1"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Akarma means without reaction to work; Krishna-conscious activity does not bind.",
+      "gold_evidence": "d in all sorts of activities for Kåñëa. Akarma means without reaction to work. The impersonalist ceases fruitive activities out of fear, so that the resultant acti on may not be a stumbling block on the path of self-realization, but the personalist  knows righ",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_039",
+      "category": "terminology",
+      "difficulty": "medium",
+      "question": "What contrast does Arjuna draw between people engaged in personal devotion and those who worship the unmanifested impersonal Brahman?",
+      "gold_sources": [
+        {
+          "source_record_id": "12.1",
+          "chapter": 12,
+          "verse_start": 1,
+          "verse_end": 1,
+          "text_label": "TEXT 1",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "12.1#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "He asks which are more perfect: those in Krishna’s devotional service, or those who worship the unmanifested impersonal Brahman.",
+      "gold_evidence": "who are always properly engaged in Your devotional service or those who worship the impersonal Brahman, the unmanifested?",
+      "notes": ""
+    },
+    {
+      "id": "gita_holdout_040",
+      "category": "terminology",
+      "difficulty": "hard",
+      "question": "According to the commentary on entering the kingdom of God at death, what is brahma-nirvana, and how does it differ from a Buddhist idea of void?",
+      "gold_sources": [
+        {
+          "source_record_id": "2.72",
+          "chapter": 2,
+          "verse_start": 72,
+          "verse_end": 72,
+          "text_label": "TEXT 72",
+          "section": "purport",
+          "gold_chunk_ids": [
+            "2.72#purport.1"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Brahma-nirvana is the divine Krishna-conscious state; unlike Buddhist void after material life, the Gita teaches actual life begins after materialistic life.",
+      "gold_evidence": "scious, he at once attains the stage of brahma-nirväëa. There is no difference between the kingdom of God and the devotional service of the Lord. Since both of them are on the absolute  p l a n e ,  t o  b e  e n g a g e d  i n  t h e transcendental loving ser",
+      "notes": "The term brahma-nirvana is in the purport, not the short translation."
+    }
+  ]
+}

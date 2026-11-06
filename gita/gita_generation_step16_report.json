@@ -1,0 +1,289 @@
+{
+  "step": 16,
+  "label": "FRESH FROZEN GENERATION EVALUATION",
+  "not_development_smoke_data": true,
+  "frozen_eval_sha256": "8cf183d9bf5421a4170047d05868626a5cde6b0f0b41d6f5d1fccf74d064d91f",
+  "hash_unchanged_after_evaluation": true,
+  "n_questions": 40,
+  "created_before_retrieval": true,
+  "config": {
+    "retriever": "plain_e5",
+    "e5": "intfloat/multilingual-e5-large",
+    "n_chunks": 1443,
+    "top_k": 5,
+    "generator": "qwen2.5:3b",
+    "prompt": "Step 14 gita_rag_prompt.txt",
+    "num_ctx": 8192,
+    "temperature": 0,
+    "seed": 0,
+    "num_predict": 512,
+    "did_not_use_step15_prompt": true
+  },
+  "retrieval": {
+    "source_recall@1": 0.9,
+    "source_recall@5": 1.0,
+    "exact_chunk_recall@1": 0.85,
+    "exact_chunk_recall@5": 0.925,
+    "source_misses": [],
+    "chunk_misses": [
+      "gita_gen_eval_006",
+      "gita_gen_eval_008",
+      "gita_gen_eval_029"
+    ]
+  },
+  "generation_counts": {
+    "Correct": 29,
+    "Partially Correct": 9,
+    "Wrong": 2
+  },
+  "grounding_counts": {
+    "Fully Grounded": 30,
+    "Partially Grounded": 8,
+    "Unsupported": 2
+  },
+  "citation_manual_counts": {
+    "Correct": 25,
+    "Missing": 15
+  },
+  "section_counts": {
+    "Correct": 36,
+    "Wrong": 2,
+    "Not Applicable": 2
+  },
+  "all_top5_supplied": true,
+  "any_truncation": false,
+  "by_category": {
+    "citation": {
+      "n": 8,
+      "correct": 4,
+      "partial": 4,
+      "wrong": 0,
+      "fully_grounded": 5,
+      "partially_grounded": 3,
+      "unsupported": 0,
+      "citation_correct": 8,
+      "citation_missing": 0,
+      "source_recall@5": 1.0,
+      "exact_chunk_recall@5": 0.75
+    },
+    "factual": {
+      "n": 8,
+      "correct": 7,
+      "partial": 1,
+      "wrong": 0,
+      "fully_grounded": 7,
+      "partially_grounded": 1,
+      "unsupported": 0,
+      "citation_correct": 5,
+      "citation_missing": 3,
+      "source_recall@5": 1.0,
+      "exact_chunk_recall@5": 1.0
+    },
+    "conceptual": {
+      "n": 8,
+      "correct": 6,
+      "partial": 2,
+      "wrong": 0,
+      "fully_grounded": 6,
+      "partially_grounded": 2,
+      "unsupported": 0,
+      "citation_correct": 5,
+      "citation_missing": 3,
+      "source_recall@5": 1.0,
+      "exact_chunk_recall@5": 1.0
+    },
+    "purport": {
+      "n": 8,
+      "correct": 5,
+      "partial": 1,
+      "wrong": 2,
+      "fully_grounded": 5,
+      "partially_grounded": 1,
+      "unsupported": 2,
+      "citation_correct": 1,
+      "citation_missing": 7,
+      "source_recall@5": 1.0,
+      "exact_chunk_recall@5": 0.875
+    },
+    "terminology": {
+      "n": 8,
+      "correct": 7,
+      "partial": 1,
+      "wrong": 0,
+      "fully_grounded": 7,
+      "partially_grounded": 1,
+      "unsupported": 0,
+      "citation_correct": 6,
+      "citation_missing": 2,
+      "source_recall@5": 1.0,
+      "exact_chunk_recall@5": 1.0
+    }
+  },
+  "by_difficulty": {
+    "easy": {
+      "n": 10,
+      "correct": 7,
+      "partial": 3,
+      "wrong": 0,
+      "fully_grounded": 8,
+      "partially_grounded": 2,
+      "unsupported": 0,
+      "citation_correct": 9,
+      "citation_missing": 1,
+      "source_recall@5": 1.0,
+      "exact_chunk_recall@5": 0.8
+    },
+    "medium": {
+      "n": 18,
+      "correct": 13,
+      "partial": 4,
+      "wrong": 1,
+      "fully_grounded": 13,
+      "partially_grounded": 4,
+      "unsupported": 1,
+      "citation_correct": 11,
+      "citation_missing": 7,
+      "source_recall@5": 1.0,
+      "exact_chunk_recall@5": 1.0
+    },
+    "hard": {
+      "n": 12,
+      "correct": 9,
+      "partial": 2,
+      "wrong": 1,
+      "fully_grounded": 9,
+      "partially_grounded": 2,
+      "unsupported": 1,
+      "citation_correct": 5,
+      "citation_missing": 7,
+      "source_recall@5": 1.0,
+      "exact_chunk_recall@5": 0.9166666666666666
+    }
+  },
+  "retrieval_failures_gold_chunk_not_in_top5": [
+    "gita_gen_eval_006",
+    "gita_gen_eval_008",
+    "gita_gen_eval_029"
+  ],
+  "generation_failures_evidence_present": [
+    "gita_gen_eval_003",
+    "gita_gen_eval_004",
+    "gita_gen_eval_013",
+    "gita_gen_eval_017",
+    "gita_gen_eval_023",
+    "gita_gen_eval_027",
+    "gita_gen_eval_030",
+    "gita_gen_eval_040"
+  ],
+  "citation_or_section_failures": [
+    {
+      "id": "gita_gen_eval_006",
+      "citation": "Correct",
+      "section": "Wrong"
+    },
+    {
+      "id": "gita_gen_eval_008",
+      "citation": "Correct",
+      "section": "Wrong"
+    },
+    {
+      "id": "gita_gen_eval_009",
+      "citation": "Missing",
+      "section": "Correct"
+    },
+    {
+      "id": "gita_gen_eval_014",
+      "citation": "Missing",
+      "section": "Correct"
+    },
+    {
+      "id": "gita_gen_eval_016",
+      "citation": "Missing",
+      "section": "Correct"
+    },
+    {
+      "id": "gita_gen_eval_017",
+      "citation": "Missing",
+      "section": "Correct"
+    },
+    {
+      "id": "gita_gen_eval_022",
+      "citation": "Missing",
+      "section": "Correct"
+    },
+    {
+      "id": "gita_gen_eval_024",
+      "citation": "Missing",
+      "section": "Correct"
+    },
+    {
+      "id": "gita_gen_eval_025",
+      "citation": "Missing",
+      "section": "Correct"
+    },
+    {
+      "id": "gita_gen_eval_026",
+      "citation": "Missing",
+      "section": "Correct"
+    },
+    {
+      "id": "gita_gen_eval_027",
+      "citation": "Missing",
+      "section": "Correct"
+    },
+    {
+      "id": "gita_gen_eval_028",
+      "citation": "Missing",
+      "section": "Correct"
+    },
+    {
+      "id": "gita_gen_eval_029",
+      "citation": "Missing",
+      "section": "Not Applicable"
+    },
+    {
+      "id": "gita_gen_eval_030",
+      "citation": "Missing",
+      "section": "Not Applicable"
+    },
+    {
+      "id": "gita_gen_eval_032",
+      "citation": "Missing",
+      "section": "Correct"
+    },
+    {
+      "id": "gita_gen_eval_036",
+      "citation": "Missing",
+      "section": "Correct"
+    },
+    {
+      "id": "gita_gen_eval_037",
+      "citation": "Missing",
+      "section": "Correct"
+    }
+  ],
+  "multi_gold_source_count": 0,
+  "chapters_represented": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "working_baseline": true,
+  "main_bottleneck": "generation_instruction_following_and_citations",
+  "recommended_step_17": "Freeze this Step 14 RAG stack as the working local baseline. Next experiment should be a citation-completeness checker only (flag missing citations; do not rewrite answers, retrieval, or the prompt) measured on this frozen Step 16 set."
+}

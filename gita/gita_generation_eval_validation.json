@@ -1,0 +1,55 @@
+{
+  "sha256": "8cf183d9bf5421a4170047d05868626a5cde6b0f0b41d6f5d1fccf74d064d91f",
+  "n_questions": 40,
+  "category_distribution": {
+    "citation": 8,
+    "factual": 8,
+    "conceptual": 8,
+    "purport": 8,
+    "terminology": 8
+  },
+  "difficulty_distribution": {
+    "easy": 10,
+    "medium": 18,
+    "hard": 12
+  },
+  "chapters_represented": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "n_chapters_represented": 18,
+  "all_18_chapters": true,
+  "multi_gold_source_count": 0,
+  "validation_checks": {
+    "every_gold_source_exists": true,
+    "every_gold_chunk_exists": true,
+    "gold_section_matches_chunk": true,
+    "must_contain_phrases_found": true,
+    "chapter_matches_record": true,
+    "no_question_contains_chunk_id": true,
+    "no_exact_duplicate_questions": true,
+    "no_duplicate_ids": true,
+    "category_counts_8_each": true,
+    "no_banned_smoke_gold_sources": true,
+    "no_exact_duplicate_of_prior_eval_questions": true
+  },
+  "overlap_with_prior_retrieval_eval_gold_sources": [],
+  "overlap_note": "Empty list means no shared gold source IDs with the frozen 30 or holdout 40 retrieval sets. Questions were compared for exact-text duplicates only; retrieval rankings were not inspected while writing items.",
+  "created_before_retrieval": true
+}

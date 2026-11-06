@@ -1,0 +1,61 @@
+{
+  "pipeline": "question -> frozen E5 Top 5 -> formatted context -> google/flan-t5-small -> answer",
+  "retriever": "plain_e5",
+  "e5_faiss_sha256": "37d700068b23111285aad0ad90fe012a0e98fba780ebcd41b7cade5110c21ec0",
+  "n_chunks": 1443,
+  "top_k": 5,
+  "generator": "google/flan-t5-small",
+  "generator_source": "already_in_local_huggingface_cache",
+  "not_used": [
+    "bm25",
+    "rrf",
+    "citation_gating",
+    "section_aware",
+    "itihasa_lora"
+  ],
+  "generation_settings": {
+    "model": "google/flan-t5-small",
+    "local": true,
+    "already_cached": true,
+    "temperature": 0,
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 192,
+    "max_input_tokens": 512
+  },
+  "n_smoke_questions": 10,
+  "smoke_ids": [
+    "smoke_001",
+    "smoke_002",
+    "smoke_003",
+    "smoke_004",
+    "smoke_005",
+    "smoke_006",
+    "smoke_007",
+    "smoke_008",
+    "smoke_009",
+    "smoke_010"
+  ],
+  "citation_support_counts": {
+    "all_supported": 10,
+    "unsupported_any": 0,
+    "no_citation_extracted": 10
+  },
+  "gold_chunk_in_top5_count": 9,
+  "insufficient_context_control": {
+    "id": "smoke_control_insufficient",
+    "answer": "The Bhagavad Gita verse/source supporting the answer. Do not invent verses, quotations, explanations, or citations. Answer in clear English.",
+    "citations": {
+      "cited_source_ids": [],
+      "retrieved_source_ids": [
+        "1.46",
+        "11.3",
+        "16.21"
+      ],
+      "unsupported_citations": [],
+      "all_citations_supported": true,
+      "cited_any": false
+    }
+  },
+  "scientific_note": "Generation smoke test only. Not a retrieval re-evaluation. Not a full generation benchmark."
+}

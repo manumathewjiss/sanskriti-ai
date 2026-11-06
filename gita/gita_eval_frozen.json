@@ -1,0 +1,725 @@
+{
+  "status": "frozen",
+  "purpose": "English retrieval evaluation for the Bhagavad Gita chunk corpus.",
+  "how_to_use": "The retrieval system must receive ONLY the 'question' field. Do not pass gold_sources, expected_answer_summary, or gold_evidence into the query. After retrieval, score hits against gold_chunk_ids / source_record_id.",
+  "do_not_edit_to_fit_retrieval_results": true,
+  "n_questions": 30,
+  "questions": [
+    {
+      "id": "gita_eval_001",
+      "category": "citation_lookup",
+      "difficulty": "easy",
+      "question": "What does Bhagavad Gita 2.47 say?",
+      "gold_sources": [
+        {
+          "source_record_id": "2.47",
+          "chapter": 2,
+          "verse_start": 47,
+          "verse_end": 47,
+          "text_label": "TEXT 47",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "2.47#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Krishna tells Arjuna he may do his prescribed duty but is not entitled to the fruits of action, should not claim to be the cause of results, and should not cling to inaction.",
+      "gold_evidence": "vad-gita 2.47 — Translation  You have a right to perform your prescribed duty, but you are not entitled to the fruits of action. Never consider yourself the cause of the results of your activities, and never be attached to not doing your duty.",
+      "notes": ""
+    },
+    {
+      "id": "gita_eval_002",
+      "category": "citation_lookup",
+      "difficulty": "easy",
+      "question": "According to Bhagavad Gita 18.66, what does Krishna tell Arjuna to surrender, and what does He promise?",
+      "gold_sources": [
+        {
+          "source_record_id": "18.66",
+          "chapter": 18,
+          "verse_start": 66,
+          "verse_end": 66,
+          "text_label": "TEXT 66",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "18.66#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Arjuna should give up all other varieties of religion and surrender to Krishna, who promises to deliver him from sinful reactions and tells him not to fear.",
+      "gold_evidence": "Bhagavad-gita 18.66 — Translation  Abandon all varieties of religion and just surrender unto Me. I shall deliver you from all sinful reactions. Do not fear.",
+      "notes": ""
+    },
+    {
+      "id": "gita_eval_003",
+      "category": "citation_lookup",
+      "difficulty": "easy",
+      "question": "In Bhagavad Gita 11.32, how does Krishna describe Himself when He speaks to Arjuna on the battlefield?",
+      "gold_sources": [
+        {
+          "source_record_id": "11.32",
+          "chapter": 11,
+          "verse_start": 32,
+          "verse_end": 32,
+          "text_label": "TEXT 32",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "11.32#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Krishna identifies Himself as time, the destroyer of the worlds, come to destroy the people there; except for the Pandavas, the soldiers on both sides will be slain.",
+      "gold_evidence": "he Supreme Personality of Godhead said: Time I am, the great destroyer of the worlds, and I have come here to destroy all people. With the exception of you [the Päëòavas], all the soldiers here on both sides will be slain.",
+      "notes": ""
+    },
+    {
+      "id": "gita_eval_004",
+      "category": "citation_lookup",
+      "difficulty": "medium",
+      "question": "At the very end of the Gita, what is Sanjaya’s concluding opinion about where Krishna and Arjuna are present?",
+      "gold_sources": [
+        {
+          "source_record_id": "18.78",
+          "chapter": 18,
+          "verse_start": 78,
+          "verse_end": 78,
+          "text_label": "TEXT 78",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "18.78#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Sanjaya says that wherever Krishna and Arjuna are, there will be opulence, victory, extraordinary power, and morality.",
+      "gold_evidence": "Bhagavad-gita 18.78 — Translation  Wherever there is Kåñëa, the master of all mystics, and wherever there is Arjuna, the supreme archer, there will also certainly be opulence, victory, extraordinary power, and morality. That is my opinion.",
+      "notes": ""
+    },
+    {
+      "id": "gita_eval_005",
+      "category": "citation_lookup",
+      "difficulty": "easy",
+      "question": "What does King Dhritarashtra ask Sanjaya at the beginning of Chapter 1?",
+      "gold_sources": [
+        {
+          "source_record_id": "1.1",
+          "chapter": 1,
+          "verse_start": 1,
+          "verse_end": 1,
+          "text_label": "TEXT 1",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "1.1#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "He asks what his sons and the sons of Pandu did after assembling at Kurukshetra, wanting to fight.",
+      "gold_evidence": "image at Kurukñetra, desiring to fight, what did they do?",
+      "notes": ""
+    },
+    {
+      "id": "gita_eval_006",
+      "category": "factual",
+      "difficulty": "medium",
+      "question": "If someone’s body is destroyed, does the Gita say the soul is destroyed with it?",
+      "gold_sources": [
+        {
+          "source_record_id": "2.20",
+          "chapter": 2,
+          "verse_start": 20,
+          "verse_end": 20,
+          "text_label": "TEXT 20",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "2.20#translation"
+          ]
+        },
+        {
+          "source_record_id": "2.13",
+          "chapter": 2,
+          "verse_start": 13,
+          "verse_end": 13,
+          "text_label": "TEXT 13",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "2.13#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "No. The soul is unborn and is not slain when the body is slain; it passes into another body as it already passed from childhood to old age.",
+      "gold_evidence": "rnal, ever-existing and primeval. He is not slain when the body is slain.",
+      "notes": "Both 2.20 and 2.13 genuinely answer; 2.20 is the more direct ‘not slain’ statement."
+    },
+    {
+      "id": "gita_eval_007",
+      "category": "factual",
+      "difficulty": "medium",
+      "question": "Why does Krishna say He appears in the world from age to age?",
+      "gold_sources": [
+        {
+          "source_record_id": "4.7",
+          "chapter": 4,
+          "verse_start": 7,
+          "verse_end": 7,
+          "text_label": "TEXT 7",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "4.7#translation"
+          ]
+        },
+        {
+          "source_record_id": "4.8",
+          "chapter": 4,
+          "verse_start": 8,
+          "verse_end": 8,
+          "text_label": "TEXT 8",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "4.8#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "When religion declines and irreligion rises, He descends to protect the pious, destroy miscreants, and reestablish religion, age after age.",
+      "gold_evidence": "ation  Whenever and wherever there is a decline in religious practice, O descendant of Bharata, and a predominant rise of irreligion—at that time I descend Myself.",
+      "notes": "4.7 and 4.8 are consecutive and both required for a complete answer."
+    },
+    {
+      "id": "gita_eval_008",
+      "category": "factual",
+      "difficulty": "easy",
+      "question": "If a person offers Krishna something as simple as a leaf or a little water, but with love, does the Gita say He accepts it?",
+      "gold_sources": [
+        {
+          "source_record_id": "9.26",
+          "chapter": 9,
+          "verse_start": 26,
+          "verse_end": 26,
+          "text_label": "TEXT 26",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "9.26#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Yes. If one offers Him a leaf, flower, fruit, or water with love and devotion, He will accept it.",
+      "gold_evidence": "one offers Me with love and devotion a leaf, a flower, fruit or water, I will accept it.",
+      "notes": ""
+    },
+    {
+      "id": "gita_eval_009",
+      "category": "factual",
+      "difficulty": "medium",
+      "question": "According to the Gita, who is seated in everyone’s heart and from whom do remembrance, knowledge, and forgetfulness come?",
+      "gold_sources": [
+        {
+          "source_record_id": "15.15",
+          "chapter": 15,
+          "verse_start": 15,
+          "verse_end": 15,
+          "text_label": "TEXT 15",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "15.15#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Krishna says He sits in everyone’s heart, and remembrance, knowledge, and forgetfulness come from Him.",
+      "gold_evidence": "Bhagavad-gita 15.15 — Translation  I am seated in everyone’s heart, and from Me come remembrance, knowledge and forgetfulness. By all the Vedas, I am to be known. Indeed, I am the compiler of Vedänta, and I am the knower of the Vedas.",
+      "notes": ""
+    },
+    {
+      "id": "gita_eval_010",
+      "category": "factual",
+      "difficulty": "medium",
+      "question": "When Arjuna asks about nature, the enjoyer, and the field, what does Krishna call the body and the one who knows the body?",
+      "gold_sources": [
+        {
+          "source_record_id": "13.1-2",
+          "chapter": 13,
+          "verse_start": 1,
+          "verse_end": 2,
+          "text_label": "TEXTS 1–2",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "13.1-2#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "The body is called the field, and the one who knows this body is called the knower of the field.",
+      "gold_evidence": "he Supreme Personality of Godhead said: This body, O son of Kunté, is called the field, and one who knows this body is called the knower of the field.",
+      "notes": "Grouped TEXTS 1–2; gold must keep verse_start=1 verse_end=2."
+    },
+    {
+      "id": "gita_eval_011",
+      "category": "factual",
+      "difficulty": "easy",
+      "question": "What three modes does the Gita say make up material nature?",
+      "gold_sources": [
+        {
+          "source_record_id": "14.5",
+          "chapter": 14,
+          "verse_start": 5,
+          "verse_end": 5,
+          "text_label": "TEXT 5",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "14.5#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Material nature consists of goodness, passion, and ignorance, and the living being becomes conditioned by these modes.",
+      "gold_evidence": "Material nature consists of three modes—goodness, passion and ignorance. When the eternal living entity comes in contact with nature, O mighty-armed Arjuna, he becomes conditioned by these modes.",
+      "notes": ""
+    },
+    {
+      "id": "gita_eval_012",
+      "category": "factual",
+      "difficulty": "medium",
+      "question": "Which eight things does Krishna list as His separated material energies?",
+      "gold_sources": [
+        {
+          "source_record_id": "7.4",
+          "chapter": 7,
+          "verse_start": 4,
+          "verse_end": 4,
+          "text_label": "TEXT 4",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "7.4#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Earth, water, fire, air, ether, mind, intelligence, and false ego — eight separated material energies.",
+      "gold_evidence": "Bhagavad-gita 7.4 — Translation  Earth, water, fire, air, ether, mind, intelligence and false ego—all together these eight constitute My separated material energies.",
+      "notes": ""
+    },
+    {
+      "id": "gita_eval_013",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "question": "Does the Gita say we should focus on doing our duty, rather than trying to control how the outcome turns out?",
+      "gold_sources": [
+        {
+          "source_record_id": "2.47",
+          "chapter": 2,
+          "verse_start": 47,
+          "verse_end": 47,
+          "text_label": "TEXT 47",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "2.47#translation"
+          ]
+        },
+        {
+          "source_record_id": "2.47",
+          "chapter": 2,
+          "verse_start": 47,
+          "verse_end": 47,
+          "text_label": "TEXT 47",
+          "section": "purport",
+          "gold_chunk_ids": [
+            "2.47#purport.1"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Yes. One has a right to prescribed work but not to the fruits; Krishna tells Arjuna to act without attachment to results, and also not to refuse the duty.",
+      "gold_evidence": "rform your prescribed duty, but you are not entitled to the fruits of action. Never consider yourself the cause of the results of your activities, and never be attached to not doing your duty.",
+      "notes": "Supported by both the verse and its purport; both listed."
+    },
+    {
+      "id": "gita_eval_014",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "question": "In what way can a person’s own mind be their friend, and in what way can it be their enemy?",
+      "gold_sources": [
+        {
+          "source_record_id": "6.5",
+          "chapter": 6,
+          "verse_start": 5,
+          "verse_end": 5,
+          "text_label": "TEXT 5",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "6.5#translation"
+          ]
+        },
+        {
+          "source_record_id": "6.6",
+          "chapter": 6,
+          "verse_start": 6,
+          "verse_end": 6,
+          "text_label": "TEXT 6",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "6.6#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "If the mind is mastered it helps the person; if not, it remains the greatest enemy. One must lift oneself with the mind, not degrade oneself.",
+      "gold_evidence": "his mind, and not degrade himself. The mind is the friend of the conditioned soul, and his enemy as well.",
+      "notes": "6.5 and 6.6 are a tight pair; 6.26/6.34 are related but not required gold."
+    },
+    {
+      "id": "gita_eval_015",
+      "category": "conceptual",
+      "difficulty": "hard",
+      "question": "What does the Gita mean when it calls staying calm in both success and failure a kind of yoga?",
+      "gold_sources": [
+        {
+          "source_record_id": "2.48",
+          "chapter": 2,
+          "verse_start": 48,
+          "verse_end": 48,
+          "text_label": "TEXT 48",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "2.48#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Yoga here is acting in one’s duty while remaining equipoised, giving up attachment to winning or losing.",
+      "gold_evidence": "Perform your duty equipoised, O Arjuna, abandoning all attachment to success or failure. Such equanimity is called yoga.",
+      "notes": ""
+    },
+    {
+      "id": "gita_eval_016",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "question": "Is it better, according to the Gita, to stop working altogether than to keep doing one’s ordinary responsibilities?",
+      "gold_sources": [
+        {
+          "source_record_id": "3.8",
+          "chapter": 3,
+          "verse_start": 8,
+          "verse_end": 8,
+          "text_label": "TEXT 8",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "3.8#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "No. Prescribed work is better than not working; one cannot even maintain the body without work.",
+      "gold_evidence": "tion  Perform your prescribed duty, for doing so is better than not working. One cannot even maintain one’s physical body without work.",
+      "notes": "2.47 also warns against attachment to inaction, but 3.8 is the direct comparison."
+    },
+    {
+      "id": "gita_eval_017",
+      "category": "conceptual",
+      "difficulty": "hard",
+      "question": "Why might someone believe ‘I am the one doing everything,’ and what does the Gita say is actually carrying out the actions?",
+      "gold_sources": [
+        {
+          "source_record_id": "3.27",
+          "chapter": 3,
+          "verse_start": 27,
+          "verse_end": 27,
+          "text_label": "TEXT 27",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "3.27#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "False ego makes the soul think it is the doer; the activities are actually carried out by the three modes of material nature.",
+      "gold_evidence": "rit soul bewildered by the influence of false ego thinks himself the doer of activities that are in actuality carried out by the three modes of material nature.",
+      "notes": ""
+    },
+    {
+      "id": "gita_eval_018",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "question": "What understanding of Krishna does the Gita connect with finding peace from material suffering?",
+      "gold_sources": [
+        {
+          "source_record_id": "5.29",
+          "chapter": 5,
+          "verse_start": 29,
+          "verse_end": 29,
+          "text_label": "TEXT 29",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "5.29#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Knowing Krishna as the beneficiary of sacrifice and austerity, the Lord of all planets and demigods, and the well-wisher of all beings, one attains peace from material miseries.",
+      "gold_evidence": "Bhagavad-gita 5.29 — Translation  A person in full consciousness of Me, knowing Me to be the ultimate  beneficiary of all sacrifices and austerities, the Supreme Lord of all planets and demigods, and the benefactor and w",
+      "notes": ""
+    },
+    {
+      "id": "gita_eval_019",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "question": "What kind of person does Krishna call very dear to Him regarding envy, friendship, and not claiming to own the world?",
+      "gold_sources": [
+        {
+          "source_record_id": "12.13-14",
+          "chapter": 12,
+          "verse_start": 13,
+          "verse_end": 14,
+          "text_label": "TEXTS 13–14",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "12.13-14#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "A devotee who is not envious, is a friend to all, does not think himself the proprietor, is free from false ego, and is steady in devotion is very dear to Krishna.",
+      "gold_evidence": "gita 12.13-14 — Translation  One who is not envious but is a kind friend to all living entities, who does not think himself a proprietor and is free from false ego, who is equal in both happiness and distress, who is tolerant, always satisfied, self-controlled",
+      "notes": "Grouped TEXTS 13–14."
+    },
+    {
+      "id": "gita_eval_020",
+      "category": "purport",
+      "difficulty": "medium",
+      "question": "Besides doing one’s proper duty, what other two kinds of action does the commentary on 2.47 warn about?",
+      "gold_sources": [
+        {
+          "source_record_id": "2.47",
+          "chapter": 2,
+          "verse_start": 47,
+          "verse_end": 47,
+          "text_label": "TEXT 47",
+          "section": "purport",
+          "gold_chunk_ids": [
+            "2.47#purport.1"
+          ]
+        }
+      ],
+      "expected_answer_summary": "The purport distinguishes prescribed duties from capricious work (unauthorized action) and inaction (not doing one’s duty). Krishna wants duty done, not idleness or whimsical work.",
+      "gold_evidence": "t  There are three considerations here: prescribed duties, capricious work, and inaction. Prescribed duties are activiti es enjoined in terms of one’s acquired modes of material nature. Capricious work means actions without the sanction of authority, and inact",
+      "notes": "These three labels are in the purport, not in the short translation."
+    },
+    {
+      "id": "gita_eval_021",
+      "category": "purport",
+      "difficulty": "hard",
+      "question": "Does the commentary on the ‘king of education’ verse say that even a person without high birth or schooling can become enlightened by serving devotees? What example does it give?",
+      "gold_sources": [
+        {
+          "source_record_id": "9.2",
+          "chapter": 9,
+          "verse_start": 2,
+          "verse_end": 2,
+          "text_label": "TEXT 2",
+          "section": "purport",
+          "gold_chunk_ids": [
+            "9.2#purport.4",
+            "9.2#purport.5"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Yes. The purport says devotional service itself purifies; Narada’s previous life as a maidservant’s uneducated son is the example, because he served great devotees.",
+      "gold_evidence": "a, who in that life happened to  be the son of a maidservant. He had no education, nor was he born into a high family. But when his mother was engaged in serving great devotees, Närada also became e ngaged, and sometimes, in the absence of his mother, he would",
+      "notes": "Narada’s story begins in 9.2#purport.4 and continues in 9.2#purport.5, so both chunks are gold."
+    },
+    {
+      "id": "gita_eval_022",
+      "category": "purport",
+      "difficulty": "hard",
+      "question": "In the yoga chapter, does the purport treat the word atma as always meaning ‘the soul,’ or can it mean the mind in that context?",
+      "gold_sources": [
+        {
+          "source_record_id": "6.5",
+          "chapter": 6,
+          "verse_start": 5,
+          "verse_end": 5,
+          "text_label": "TEXT 5",
+          "section": "purport",
+          "gold_chunk_ids": [
+            "6.5#purport.1"
+          ]
+        }
+      ],
+      "expected_answer_summary": "The purport says atma can mean body, mind, or soul depending on context; here, because yoga centers on the mind, atma refers to the mind.",
+      "gold_evidence": "Bhagavad-gita 6.5 — Purport  The word ätmä denotes body, mind and soul—depending upon different circumstances. In the yoga system, the mind and the conditioned soul are especially important. Since the mind is the central point of yoga practice, ätmä refers h",
+      "notes": "Not stated in the translation, which only says the mind can be friend or enemy."
+    },
+    {
+      "id": "gita_eval_023",
+      "category": "purport",
+      "difficulty": "hard",
+      "question": "Does the commentary on 15.7 say the living being is an individual only while trapped in this world, or that this individuality is eternal?",
+      "gold_sources": [
+        {
+          "source_record_id": "15.7",
+          "chapter": 15,
+          "verse_start": 7,
+          "verse_end": 7,
+          "text_label": "TEXT 7",
+          "section": "purport",
+          "gold_chunk_ids": [
+            "15.7#purport.1"
+          ]
+        }
+      ],
+      "expected_answer_summary": "The purport says the living entity is an eternal fragmental part of the Lord, not someone who is individual only in conditioned life and later becomes one with God.",
+      "gold_evidence": "tal part and parcel of the Supreme Lord—eternally. It is not that he assumes individuality in hi s conditional life and in his liberated state becomes one with the Supreme Lord. He is eternally fragmented. It is clearly said, sanätanaù. According to the Vedic",
+      "notes": "The translation says ‘eternal fragmental parts’; the purport is more explicit about not merging individuality away."
+    },
+    {
+      "id": "gita_eval_024",
+      "category": "purport",
+      "difficulty": "medium",
+      "question": "In the long commentary on the divine qualities in Chapter 16, how is truthfulness (satyam) explained, and how should difficult Vedic passages be understood?",
+      "gold_sources": [
+        {
+          "source_record_id": "16.1-3",
+          "chapter": 16,
+          "verse_start": 1,
+          "verse_end": 3,
+          "text_label": "TEXTS 1–3",
+          "section": "purport",
+          "gold_chunk_ids": [
+            "16.1-3#purport.7"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Satyam means not twisting the truth for personal gain. Hard Vedic passages should be learned from a bona fide spiritual master, not given a self-serving interpretation.",
+      "gold_evidence": "Satyam. This word means that one should not distort the truth for some personal interest. In Vedic literature th ere are some difficult passages, but the meaning or the purpose should be learne d from a bona fide spiritual master. That is the process for und e",
+      "notes": "This explanation is in purport part 7, not in the translation’s list of qualities."
+    },
+    {
+      "id": "gita_eval_025",
+      "category": "purport",
+      "difficulty": "medium",
+      "question": "Does the commentary on offering a leaf or water say this process is only for scholars, or can even a poor unqualified person attempt it?",
+      "gold_sources": [
+        {
+          "source_record_id": "9.26",
+          "chapter": 9,
+          "verse_start": 26,
+          "verse_end": 26,
+          "text_label": "TEXT 26",
+          "section": "purport",
+          "gold_chunk_ids": [
+            "9.26#purport.1"
+          ]
+        }
+      ],
+      "expected_answer_summary": "The purport says the process is easy and can be attempted even by the poorest, without material qualification; the needed qualification is to be a pure devotee.",
+      "gold_evidence": "y easy and can be attempted even by the poorest of the poor, without any kind of qualification. The only qualification required in this connection is to be a pure devotee of the Lord. It does not matter what one is or where one is situated. The process i s so",
+      "notes": "The translation mentions leaf/water; the ‘poorest of the poor / no qualification’ wording is purport-only."
+    },
+    {
+      "id": "gita_eval_026",
+      "category": "terminology",
+      "difficulty": "medium",
+      "question": "When this Gita defines karma next to Brahman and the self, what kind of action is karma said to be?",
+      "gold_sources": [
+        {
+          "source_record_id": "8.3",
+          "chapter": 8,
+          "verse_start": 3,
+          "verse_end": 3,
+          "text_label": "TEXT 3",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "8.3#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Karma is action connected with the development of the material bodies of living beings, i.e. fruitive activities.",
+      "gold_evidence": "terial bodies of the living entities is called karma, or fruitive activities.",
+      "notes": "This edition also calls the living entity Brahman in the same verse; the question is only about the karma definition."
+    },
+    {
+      "id": "gita_eval_027",
+      "category": "terminology",
+      "difficulty": "medium",
+      "question": "What does this Gita call yoga when it talks about working without clinging to success or failure?",
+      "gold_sources": [
+        {
+          "source_record_id": "2.48",
+          "chapter": 2,
+          "verse_start": 48,
+          "verse_end": 48,
+          "text_label": "TEXT 48",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "2.48#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "That even-minded, unattached performance of duty is called yoga.",
+      "gold_evidence": "attachment to success or failure. Such equanimity is called yoga.",
+      "notes": "Shares a gold verse with 015 but asks for the term ‘yoga’, not the pastoral advice."
+    },
+    {
+      "id": "gita_eval_028",
+      "category": "terminology",
+      "difficulty": "medium",
+      "question": "According to the Gita, who actually performs activities when a person, under false ego, thinks ‘I am the doer’ — and what role do the gunas play?",
+      "gold_sources": [
+        {
+          "source_record_id": "3.27",
+          "chapter": 3,
+          "verse_start": 27,
+          "verse_end": 27,
+          "text_label": "TEXT 27",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "3.27#translation"
+          ]
+        }
+      ],
+      "expected_answer_summary": "The three modes (gunas) of material nature carry out the activities; false ego makes the soul think it is the doer.",
+      "gold_evidence": "hat are in actuality carried out by the three modes of material nature.",
+      "notes": "Same verse as 017; this item tests the term gunas/modes rather than the conceptual ‘why’. Acceptable overlap of gold, different question."
+    },
+    {
+      "id": "gita_eval_029",
+      "category": "terminology",
+      "difficulty": "hard",
+      "question": "What does this book mean by prakriti when it lists earth, water, fire, and so on as Krishna’s energies?",
+      "gold_sources": [
+        {
+          "source_record_id": "7.4",
+          "chapter": 7,
+          "verse_start": 4,
+          "verse_end": 4,
+          "text_label": "TEXT 4",
+          "section": "translation",
+          "gold_chunk_ids": [
+            "7.4#translation"
+          ]
+        },
+        {
+          "source_record_id": "7.4",
+          "chapter": 7,
+          "verse_start": 4,
+          "verse_end": 4,
+          "text_label": "TEXT 4",
+          "section": "purport",
+          "gold_chunk_ids": [
+            "7.4#purport.1"
+          ]
+        }
+      ],
+      "expected_answer_summary": "Those eight items are Krishna’s separated material energies; the purport names material nature prakriti, energy of the Lord.",
+      "gold_evidence": "—all together these eight constitute My separated material energies.",
+      "notes": "The English word ‘prakriti’ is in the purport (as prakåti). Translation says ‘material energies’ without that Sanskrit label."
+    },
+    {
+      "id": "gita_eval_030",
+      "category": "terminology",
+      "difficulty": "hard",
+      "question": "Who is Paramatma according to the commentary on the verse where Krishna says He sits in the heart?",
+      "gold_sources": [
+        {
+          "source_record_id": "15.15",
+          "chapter": 15,
+          "verse_start": 15,
+          "verse_end": 15,
+          "text_label": "TEXT 15",
+          "section": "purport",
+          "gold_chunk_ids": [
+            "15.15#purport.1"
+          ]
+        }
+      ],
+      "expected_answer_summary": "The purport identifies the Lord in the heart as Paramatma, from whom activities are initiated and who witnesses the living being’s work.",
+      "gold_evidence": "port (part 1 of 2)  The Supreme Lord is situated as Paramätmä in everyone’s heart, and it is from Him that all activities are initiat ed. The living entity forgets everything of his past life, but he has to act a ccording to the direction of the Supreme Lord,",
+      "notes": "The translation does not use the word Paramatma; that label is in the purport. Useful because synonyms were not embedded."
+    }
+  ]
+}

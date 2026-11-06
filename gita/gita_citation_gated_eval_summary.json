@@ -1,0 +1,749 @@
+{
+  "method": "citation_gated",
+  "exploratory_note": "The routing rule was motivated by Step 7–9 results on THIS same frozen 30-question set. Step 10 is a diagnostic architecture experiment, not an unbiased held-out evaluation.",
+  "citation_regex": "\\b\\d{1,2}\\.\\d{1,3}\\b",
+  "routing_rule": "If question text matches \\b\\d{1,2}\\.\\d{1,3}\\b, use saved Step 9 RRF hybrid Top 10; else use saved Step 7 E5 Top 10. No metadata verse lookup.",
+  "n_questions": 30,
+  "n_routed_to_hybrid_rrf": 5,
+  "n_routed_to_e5": 25,
+  "citation_bearing_questions": [
+    {
+      "id": "gita_eval_001",
+      "question": "What does Bhagavad Gita 2.47 say?",
+      "detected_citation_tokens": [
+        "2.47"
+      ],
+      "selected_retriever": "hybrid_rrf"
+    },
+    {
+      "id": "gita_eval_002",
+      "question": "According to Bhagavad Gita 18.66, what does Krishna tell Arjuna to surrender, and what does He promise?",
+      "detected_citation_tokens": [
+        "18.66"
+      ],
+      "selected_retriever": "hybrid_rrf"
+    },
+    {
+      "id": "gita_eval_003",
+      "question": "In Bhagavad Gita 11.32, how does Krishna describe Himself when He speaks to Arjuna on the battlefield?",
+      "detected_citation_tokens": [
+        "11.32"
+      ],
+      "selected_retriever": "hybrid_rrf"
+    },
+    {
+      "id": "gita_eval_020",
+      "question": "Besides doing one’s proper duty, what other two kinds of action does the commentary on 2.47 warn about?",
+      "detected_citation_tokens": [
+        "2.47"
+      ],
+      "selected_retriever": "hybrid_rrf"
+    },
+    {
+      "id": "gita_eval_023",
+      "question": "Does the commentary on 15.7 say the living being is an individual only while trapped in this world, or that this individuality is eternal?",
+      "detected_citation_tokens": [
+        "15.7"
+      ],
+      "selected_retriever": "hybrid_rrf"
+    }
+  ],
+  "reused_rankings": {
+    "e5_results": "gita_e5_eval_results.json",
+    "hybrid_results": "gita_hybrid_rrf_eval_results.json",
+    "e5_results_sha256": "3d34423aefee021d315548de436bd4a35d1651a14b72e56e78aa03238ee67d93",
+    "hybrid_results_sha256": "2eb35c5c58b1f11fc351142848c5de99d05a2091af4d230687f390190f46eefb"
+  },
+  "frozen_eval_sha256": "8da7a3ed170cdf995401e17c7481a61174b61e4e5cc5583c4282c745deaf6c27",
+  "scoring_rule": "Any valid gold source/chunk counts as the first hit. Not all golds need to appear. Missing from top-10 => 0 for that question.",
+  "source_level": {
+    "recall@1": 0.7333333333333333,
+    "recall@5": 0.8666666666666667,
+    "recall@10": 1.0,
+    "mrr@10": 0.7979100529100529,
+    "n": 30
+  },
+  "chunk_level": {
+    "recall@1": 0.6,
+    "recall@5": 0.8,
+    "recall@10": 0.8333333333333334,
+    "mrr@10": 0.677037037037037,
+    "n": 30
+  },
+  "source_level_by_category": {
+    "citation_lookup": {
+      "recall@1": 0.6,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr@10": 0.7166666666666667,
+      "n": 5
+    },
+    "conceptual": {
+      "recall@1": 0.5714285714285714,
+      "recall@5": 0.7142857142857143,
+      "recall@10": 1.0,
+      "mrr@10": 0.6825396825396826,
+      "n": 7
+    },
+    "factual": {
+      "recall@1": 0.7142857142857143,
+      "recall@5": 0.7142857142857143,
+      "recall@10": 1.0,
+      "mrr@10": 0.7489795918367347,
+      "n": 7
+    },
+    "purport": {
+      "recall@1": 1.0,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr@10": 1.0,
+      "n": 6
+    },
+    "terminology": {
+      "recall@1": 0.8,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr@10": 0.8666666666666666,
+      "n": 5
+    }
+  },
+  "source_level_by_difficulty": {
+    "easy": {
+      "recall@1": 0.8333333333333334,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr@10": 0.875,
+      "n": 6
+    },
+    "hard": {
+      "recall@1": 0.7142857142857143,
+      "recall@5": 0.8571428571428571,
+      "recall@10": 1.0,
+      "mrr@10": 0.7777777777777778,
+      "n": 7
+    },
+    "medium": {
+      "recall@1": 0.7058823529411765,
+      "recall@5": 0.8235294117647058,
+      "recall@10": 1.0,
+      "mrr@10": 0.7789915966386554,
+      "n": 17
+    }
+  },
+  "four_way_source_level": {
+    "recall@1": {
+      "e5": 0.7,
+      "bm25": 0.4666666666666667,
+      "rrf_hybrid": 0.6666666666666666,
+      "citation_gated": 0.7333333333333333
+    },
+    "recall@5": {
+      "e5": 0.8333333333333334,
+      "bm25": 0.6333333333333333,
+      "rrf_hybrid": 0.8666666666666667,
+      "citation_gated": 0.8666666666666667
+    },
+    "recall@10": {
+      "e5": 0.9666666666666667,
+      "bm25": 0.8333333333333334,
+      "rrf_hybrid": 1.0,
+      "citation_gated": 1.0
+    },
+    "mrr@10": {
+      "e5": 0.7729100529100529,
+      "bm25": 0.5382804232804232,
+      "rrf_hybrid": 0.7536507936507937,
+      "citation_gated": 0.7979100529100529
+    }
+  },
+  "four_way_chunk_level": {
+    "recall@1": {
+      "e5": 0.6,
+      "bm25": 0.3333333333333333,
+      "rrf_hybrid": 0.5333333333333333,
+      "citation_gated": 0.6
+    },
+    "recall@5": {
+      "e5": 0.7666666666666667,
+      "bm25": 0.5666666666666667,
+      "rrf_hybrid": 0.7666666666666667,
+      "citation_gated": 0.8
+    },
+    "recall@10": {
+      "e5": 0.8,
+      "bm25": 0.7,
+      "rrf_hybrid": 0.8,
+      "citation_gated": 0.8333333333333334
+    },
+    "mrr@10": {
+      "e5": 0.6759259259259259,
+      "bm25": 0.4273544973544974,
+      "rrf_hybrid": 0.6114814814814815,
+      "citation_gated": 0.677037037037037
+    }
+  },
+  "four_way_source_by_category": {
+    "citation_lookup": {
+      "recall@1": {
+        "e5": 0.4,
+        "bm25": 0.2,
+        "rrf_hybrid": 0.6,
+        "citation_gated": 0.6
+      },
+      "recall@5": {
+        "e5": 0.8,
+        "bm25": 0.4,
+        "rrf_hybrid": 0.8,
+        "citation_gated": 1.0
+      },
+      "recall@10": {
+        "e5": 0.8,
+        "bm25": 0.8,
+        "rrf_hybrid": 1.0,
+        "citation_gated": 1.0
+      },
+      "mrr@10": {
+        "e5": 0.5666666666666667,
+        "bm25": 0.28222222222222226,
+        "rrf_hybrid": 0.67,
+        "citation_gated": 0.7166666666666667
+      }
+    },
+    "conceptual": {
+      "recall@1": {
+        "e5": 0.5714285714285714,
+        "bm25": 0.0,
+        "rrf_hybrid": 0.42857142857142855,
+        "citation_gated": 0.5714285714285714
+      },
+      "recall@5": {
+        "e5": 0.7142857142857143,
+        "bm25": 0.14285714285714285,
+        "rrf_hybrid": 0.5714285714285714,
+        "citation_gated": 0.7142857142857143
+      },
+      "recall@10": {
+        "e5": 1.0,
+        "bm25": 0.42857142857142855,
+        "rrf_hybrid": 1.0,
+        "citation_gated": 1.0
+      },
+      "mrr@10": {
+        "e5": 0.6825396825396826,
+        "bm25": 0.0858843537414966,
+        "rrf_hybrid": 0.5561224489795918,
+        "citation_gated": 0.6825396825396826
+      }
+    },
+    "factual": {
+      "recall@1": {
+        "e5": 0.7142857142857143,
+        "bm25": 0.5714285714285714,
+        "rrf_hybrid": 0.5714285714285714,
+        "citation_gated": 0.7142857142857143
+      },
+      "recall@5": {
+        "e5": 0.7142857142857143,
+        "bm25": 0.7142857142857143,
+        "rrf_hybrid": 1.0,
+        "citation_gated": 0.7142857142857143
+      },
+      "recall@10": {
+        "e5": 1.0,
+        "bm25": 1.0,
+        "rrf_hybrid": 1.0,
+        "citation_gated": 1.0
+      },
+      "mrr@10": {
+        "e5": 0.7489795918367347,
+        "bm25": 0.6337301587301587,
+        "rrf_hybrid": 0.719047619047619,
+        "citation_gated": 0.7489795918367347
+      }
+    },
+    "purport": {
+      "recall@1": {
+        "e5": 1.0,
+        "bm25": 0.8333333333333334,
+        "rrf_hybrid": 0.8333333333333334,
+        "citation_gated": 1.0
+      },
+      "recall@5": {
+        "e5": 1.0,
+        "bm25": 1.0,
+        "rrf_hybrid": 1.0,
+        "citation_gated": 1.0
+      },
+      "recall@10": {
+        "e5": 1.0,
+        "bm25": 1.0,
+        "rrf_hybrid": 1.0,
+        "citation_gated": 1.0
+      },
+      "mrr@10": {
+        "e5": 1.0,
+        "bm25": 0.9166666666666666,
+        "rrf_hybrid": 0.8888888888888888,
+        "citation_gated": 1.0
+      }
+    },
+    "terminology": {
+      "recall@1": {
+        "e5": 0.8,
+        "bm25": 0.8,
+        "rrf_hybrid": 1.0,
+        "citation_gated": 0.8
+      },
+      "recall@5": {
+        "e5": 1.0,
+        "bm25": 1.0,
+        "rrf_hybrid": 1.0,
+        "citation_gated": 1.0
+      },
+      "recall@10": {
+        "e5": 1.0,
+        "bm25": 1.0,
+        "rrf_hybrid": 1.0,
+        "citation_gated": 1.0
+      },
+      "mrr@10": {
+        "e5": 0.8666666666666666,
+        "bm25": 0.8400000000000001,
+        "rrf_hybrid": 1.0,
+        "citation_gated": 0.8666666666666666
+      }
+    }
+  },
+  "per_question_comparison": [
+    {
+      "id": "gita_eval_001",
+      "category": "citation_lookup",
+      "citation_detected": true,
+      "detected_citation_tokens": [
+        "2.47"
+      ],
+      "selected_retriever": "hybrid_rrf",
+      "e5_source_gold_rank": 2,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 2,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_002",
+      "category": "citation_lookup",
+      "citation_detected": true,
+      "detected_citation_tokens": [
+        "18.66"
+      ],
+      "selected_retriever": "hybrid_rrf",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 9,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": null,
+      "rrf_chunk_gold_rank": 5,
+      "gated_chunk_gold_rank": 5
+    },
+    {
+      "id": "gita_eval_003",
+      "category": "citation_lookup",
+      "citation_detected": true,
+      "detected_citation_tokens": [
+        "11.32"
+      ],
+      "selected_retriever": "hybrid_rrf",
+      "e5_source_gold_rank": null,
+      "bm25_source_gold_rank": 5,
+      "rrf_source_gold_rank": 4,
+      "gated_source_gold_rank": 4,
+      "e5_chunk_gold_rank": null,
+      "rrf_chunk_gold_rank": null,
+      "gated_chunk_gold_rank": null
+    },
+    {
+      "id": "gita_eval_004",
+      "category": "citation_lookup",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 3,
+      "bm25_source_gold_rank": 10,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 3,
+      "e5_chunk_gold_rank": 3,
+      "rrf_chunk_gold_rank": 5,
+      "gated_chunk_gold_rank": 3
+    },
+    {
+      "id": "gita_eval_005",
+      "category": "citation_lookup",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": null,
+      "rrf_source_gold_rank": 10,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": null,
+      "rrf_chunk_gold_rank": null,
+      "gated_chunk_gold_rank": null
+    },
+    {
+      "id": "gita_eval_006",
+      "category": "factual",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 10,
+      "bm25_source_gold_rank": 8,
+      "rrf_source_gold_rank": 5,
+      "gated_source_gold_rank": 10,
+      "e5_chunk_gold_rank": null,
+      "rrf_chunk_gold_rank": null,
+      "gated_chunk_gold_rank": null
+    },
+    {
+      "id": "gita_eval_007",
+      "category": "factual",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 7,
+      "bm25_source_gold_rank": 5,
+      "rrf_source_gold_rank": 3,
+      "gated_source_gold_rank": 7,
+      "e5_chunk_gold_rank": null,
+      "rrf_chunk_gold_rank": null,
+      "gated_chunk_gold_rank": null
+    },
+    {
+      "id": "gita_eval_008",
+      "category": "factual",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_009",
+      "category": "factual",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_010",
+      "category": "factual",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_011",
+      "category": "factual",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 9,
+      "rrf_source_gold_rank": 2,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 2,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_012",
+      "category": "factual",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_013",
+      "category": "conceptual",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 2,
+      "bm25_source_gold_rank": 7,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 2,
+      "e5_chunk_gold_rank": 2,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 2
+    },
+    {
+      "id": "gita_eval_014",
+      "category": "conceptual",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": null,
+      "rrf_source_gold_rank": 8,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 9,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_015",
+      "category": "conceptual",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": null,
+      "rrf_source_gold_rank": 8,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": null,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_016",
+      "category": "conceptual",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 3,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_017",
+      "category": "conceptual",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 9,
+      "bm25_source_gold_rank": null,
+      "rrf_source_gold_rank": 7,
+      "gated_source_gold_rank": 9,
+      "e5_chunk_gold_rank": 9,
+      "rrf_chunk_gold_rank": null,
+      "gated_chunk_gold_rank": 9
+    },
+    {
+      "id": "gita_eval_018",
+      "category": "conceptual",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 6,
+      "bm25_source_gold_rank": 8,
+      "rrf_source_gold_rank": 2,
+      "gated_source_gold_rank": 6,
+      "e5_chunk_gold_rank": null,
+      "rrf_chunk_gold_rank": 3,
+      "gated_chunk_gold_rank": null
+    },
+    {
+      "id": "gita_eval_019",
+      "category": "conceptual",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": null,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 3,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_020",
+      "category": "purport",
+      "citation_detected": true,
+      "detected_citation_tokens": [
+        "2.47"
+      ],
+      "selected_retriever": "hybrid_rrf",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 3,
+      "gated_chunk_gold_rank": 3
+    },
+    {
+      "id": "gita_eval_021",
+      "category": "purport",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 3,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 3,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_022",
+      "category": "purport",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_023",
+      "category": "purport",
+      "citation_detected": true,
+      "detected_citation_tokens": [
+        "15.7"
+      ],
+      "selected_retriever": "hybrid_rrf",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 2,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_024",
+      "category": "purport",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_025",
+      "category": "purport",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 2,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 2
+    },
+    {
+      "id": "gita_eval_026",
+      "category": "terminology",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_027",
+      "category": "terminology",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_028",
+      "category": "terminology",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_029",
+      "category": "terminology",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_eval_030",
+      "category": "terminology",
+      "citation_detected": false,
+      "detected_citation_tokens": [],
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 3,
+      "bm25_source_gold_rank": 5,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 3,
+      "e5_chunk_gold_rank": 3,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 3
+    }
+  ]
+}

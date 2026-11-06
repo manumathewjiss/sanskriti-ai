@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanskrity - Sanskrit Scripture AI</title>
+    <meta name="description" content="AI-powered Sanskrit scripture assistant with context-aware responses">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="new-chat-btn" onclick="newChat()">
+                    <i class="ph ph-plus"></i>
+                    <span>New chat</span>
+                </button>
+                <button class="sidebar-toggle" onclick="toggleSidebar()">
+                    <i class="ph ph-sidebar-simple"></i>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <button class="nav-item active" data-tab="chat">
+                    <i class="ph ph-chats-circle"></i>
+                    <span>Chat</span>
+                </button>
+                <button class="nav-item" data-tab="upload">
+                    <i class="ph ph-folder-open"></i>
+                    <span>Context Library</span>
+                </button>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="model-badge">
+                    <i class="ph ph-sparkle"></i>
+                    <span>Sanskrit RAG v2.0</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Chat Tab -->
+            <section class="tab-content active" id="chat-tab">
+                <div class="chat-container">
+                    <!-- Chat Header -->
+                    <div class="chat-header">
+                        <button class="mobile-menu-btn" onclick="toggleSidebar()">
+                            <i class="ph ph-list"></i>
+                        </button>
+                        <h1 class="chat-title">
+                            <span class="chat-title-icon">ॐ</span>
+                            Sanskrity
+                        </h1>
+                        <div class="header-actions">
+                            <button class="icon-btn" onclick="newChat()" title="New Chat">
+                                <i class="ph ph-note-pencil"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Chat Messages Area -->
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="welcome-screen">
+                            <div class="welcome-logo">
+                                <span class="om-symbol">ॐ</span>
+                            </div>
+                            <h2>How can I help you today?</h2>
+                            <p class="welcome-subtitle">Ask me about Sanskrit scriptures, Ramayana, Mahabharata, or dharmic teachings</p>
+                            
+                            <div class="suggestion-grid">
+                                <button class="suggestion-card" onclick="setQuery('What is dharma according to Ramayana?')">
+                                    <i class="ph ph-book-open-text"></i>
+                                    <span>What is dharma according to Ramayana?</span>
+                                </button>
+                                <button class="suggestion-card" onclick="setQuery('Explain the concept of karma')">
+                                    <i class="ph ph-infinity"></i>
+                                    <span>Explain the concept of karma</span>
+                                </button>
+                                <button class="suggestion-card" onclick="setQuery('What did Lord Rama teach about duty?')">
+                                    <i class="ph ph-crown"></i>
+                                    <span>What did Lord Rama teach about duty?</span>
+                                </button>
+                                <button class="suggestion-card" onclick="setQuery('Summarize the Bhagavad Gita teachings')">
+                                    <i class="ph ph-scroll"></i>
+                                    <span>Summarize the Bhagavad Gita teachings</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Chat Input -->
+                    <div class="chat-input-area">
+                        <div class="input-container">
+                            <textarea 
+                                id="queryInput" 
+                                placeholder="Message Sanskrity..."
+                                class="message-input"
+                                rows="1"
+                            ></textarea>
+                            <div class="input-actions">
+                                <button id="voiceBtn" class="input-action-btn" title="Voice input">
+                                    <i class="ph ph-microphone"></i>
+                                </button>
+                                <button id="submitBtn" class="send-btn" title="Send message">
+                                    <i class="ph ph-arrow-up"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="input-footer">Sanskrity uses local LLM and can make mistakes. Verify important information.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Upload Tab -->
+            <section class="tab-content" id="upload-tab">
+                <div class="upload-page">
+                    <div class="upload-header">
+                        <button class="mobile-menu-btn" onclick="toggleSidebar()">
+                            <i class="ph ph-list"></i>
+                        </button>
+                        <h1><i class="ph ph-books"></i> Context Library</h1>
+                    </div>
+                    
+                    <div class="upload-content">
+                        <div class="upload-card">
+                            <div class="upload-icon-large">
+                                <i class="ph ph-cloud-arrow-up"></i>
+                            </div>
+                            <h3>Upload Documents</h3>
+                            <p>Add your own texts to enhance the AI's knowledge</p>
+                            
+                            <div class="upload-zone" id="uploadArea">
+                                <i class="ph ph-file-arrow-up"></i>
+                                <span class="upload-main-text">Drop files here or click to browse</span>
+                                <span class="upload-hint">PDF, DOCX, TXT (max 10MB)</span>
+                                <input type="file" id="fileInput" accept=".pdf,.docx,.txt" hidden>
+                            </div>
+                            
+                            <div class="upload-progress" id="uploadProgress" style="display: none;">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="progressFill"></div>
+                                </div>
+                                <span id="uploadStatus">Processing...</span>
+                            </div>
+                        </div>
+                        
+                        <div class="text-input-card">
+                            <h3><i class="ph ph-text-aa"></i> Add Text Directly</h3>
+                            <input type="text" id="textTitle" placeholder="Title (optional)" class="text-input">
+                            <textarea id="textContent" placeholder="Paste your context here..." class="text-area"></textarea>
+                            <button id="addTextBtn" class="add-text-btn">
+                                <i class="ph ph-plus"></i>
+                                Add Context
+                            </button>
+                        </div>
+                        
+                        <div class="context-list-card">
+                            <h3><i class="ph ph-folder-notch"></i> Uploaded Contexts</h3>
+                            <div id="contextList" class="context-list">
+                                <div class="empty-state">
+                                    <i class="ph ph-folder-notch-open"></i>
+                                    <span>No contexts uploaded yet</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="toast-icon ph ph-check-circle"></i>
+        <span class="toast-message"></span>
+    </div>
+
+    <!-- Script -->
+    <script src="/static/app.js"></script>
+</body>
+</html>

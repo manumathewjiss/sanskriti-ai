@@ -1,0 +1,203 @@
+{
+  "step": 15,
+  "experiment": "prompt_only",
+  "development_data": true,
+  "not_an_untouched_test": true,
+  "only_change": "grounding_prompt",
+  "kept_step14_prompt_as_baseline": true,
+  "recommendation_keep_prompt": "step14",
+  "reason": "Step 15 is mixed: 002 section improved and 010 cited 18.2, but 005 regressed, 007 still hedged without Narada, 010 still wrong, control invented a 2.47 citation.",
+  "frozen": {
+    "retriever": "plain_e5_saved_top5",
+    "e5_model": "intfloat/multilingual-e5-large",
+    "faiss": "gita/gita_e5.faiss",
+    "n_chunks": 1443,
+    "top_k": 5,
+    "generator": "qwen2.5:3b",
+    "provider": "ollama",
+    "temperature": 0,
+    "num_ctx": 8192,
+    "seed": 0,
+    "num_predict": 512,
+    "context_construction": "identical_to_step14_verified"
+  },
+  "prompt_file": "gita_rag_prompt_step15.txt",
+  "prompt_sha256": "d9474b6447c46ef74467369121a8777eea822631f64d8451a5b696c853b4f8fc",
+  "context_window": {
+    "all_top5_supplied_for_all_10": true,
+    "any_input_truncation": false,
+    "prompt_eval_counts": {
+      "smoke_001": 877,
+      "smoke_002": 1590,
+      "smoke_003": 2362,
+      "smoke_004": 937,
+      "smoke_005": 1563,
+      "smoke_006": 1355,
+      "smoke_007": 3150,
+      "smoke_008": 2760,
+      "smoke_009": 2350,
+      "smoke_010": 1588
+    }
+  },
+  "manual_evaluation": {
+    "method": "human labels comparing Step 14 Qwen vs Step 15 Qwen on the same 10 questions and same Top 5",
+    "counts": {
+      "step14": {
+        "correct": 8,
+        "partially_correct": 1,
+        "wrong": 1,
+        "fully_grounded": 8,
+        "partially_grounded": 1,
+        "unsupported": 1,
+        "citation_correct": 8,
+        "citation_partial": 0,
+        "citation_missing": 2,
+        "citation_unsupported": 0,
+        "section_correct": 8,
+        "section_wrong": 1,
+        "section_na": 1,
+        "insufficient_context_refusal": true,
+        "control_invented_citation": false
+      },
+      "step15": {
+        "correct": 7,
+        "partially_correct": 2,
+        "wrong": 1,
+        "fully_grounded": 7,
+        "partially_grounded": 3,
+        "unsupported": 0,
+        "citation_correct": 8,
+        "citation_partial": 0,
+        "citation_missing": 2,
+        "citation_unsupported": 0,
+        "section_correct": 8,
+        "section_wrong": 1,
+        "section_na": 0,
+        "insufficient_context_refusal": true,
+        "control_invented_citation": true
+      }
+    },
+    "per_question": [
+      {
+        "id": "smoke_001",
+        "gold_chunk_in_top5": "YES",
+        "delta": "Preserved",
+        "step14": {"correctness": "Correct", "grounding": "Fully Grounded", "citation": "Correct", "section": "Correct"},
+        "step15": {"correctness": "Correct", "grounding": "Fully Grounded", "citation": "Correct", "section": "Correct"},
+        "notes": "Still quotes 2.47 translation with (Bhagavad Gita 2.47, Translation). Mentions Evidence 2 against instruction 11."
+      },
+      {
+        "id": "smoke_002",
+        "gold_chunk_in_top5": "NO",
+        "delta": "Improved",
+        "step14": {"correctness": "Correct", "grounding": "Fully Grounded", "citation": "Correct", "section": "Wrong"},
+        "step15": {"correctness": "Correct", "grounding": "Fully Grounded", "citation": "Correct", "section": "Correct"},
+        "notes": "Still uses 18.66 purport. Now cites (Bhagavad Gita 18.66, Purport). Does not claim Translation was retrieved."
+      },
+      {
+        "id": "smoke_003",
+        "gold_chunk_in_top5": "YES",
+        "delta": "Preserved",
+        "step14": {"correctness": "Correct", "grounding": "Fully Grounded", "citation": "Correct", "section": "Correct"},
+        "step15": {"correctness": "Correct", "grounding": "Fully Grounded", "citation": "Correct", "section": "Correct"}
+      },
+      {
+        "id": "smoke_004",
+        "gold_chunk_in_top5": "YES",
+        "delta": "Preserved",
+        "step14": {"correctness": "Correct", "grounding": "Fully Grounded", "citation": "Correct", "section": "Correct"},
+        "step15": {"correctness": "Correct", "grounding": "Fully Grounded", "citation": "Correct", "section": "Correct"}
+      },
+      {
+        "id": "smoke_005",
+        "gold_chunk_in_top5": "YES",
+        "delta": "Regressed",
+        "step14": {"correctness": "Correct", "grounding": "Fully Grounded", "citation": "Correct", "section": "Correct"},
+        "step15": {"correctness": "Partially Correct", "grounding": "Partially Grounded", "citation": "Correct", "section": "Wrong"},
+        "notes": "Friend side still uses 6.6. Enemy side dropped 6.5 and misused 16.13-15 (demoniac wealth thoughts) as mind-as-enemy. 16.13-15 was retrieved so the citation is supported as a source ID, but it is the wrong teaching."
+      },
+      {
+        "id": "smoke_006",
+        "gold_chunk_in_top5": "YES",
+        "delta": "Preserved",
+        "step14": {"correctness": "Correct", "grounding": "Fully Grounded", "citation": "Correct", "section": "Correct"},
+        "step15": {"correctness": "Correct", "grounding": "Fully Grounded", "citation": "Missing", "section": "Correct"},
+        "notes": "Answer still uses 9.27 translation. Wrote 'Evidence 9.27' instead of (Bhagavad Gita 9.27, Translation), so the validator marks MISSING. Answer quality preserved; citation compliance worse."
+      },
+      {
+        "id": "smoke_007",
+        "gold_chunk_in_top5": "YES",
+        "delta": "Unchanged",
+        "step14": {"correctness": "Partially Correct", "grounding": "Partially Grounded", "citation": "Missing", "section": "Correct"},
+        "step15": {"correctness": "Partially Correct", "grounding": "Partially Grounded", "citation": "Correct", "section": "Correct"},
+        "notes": "Still hedges that the king-of-education commentary does not directly address the question. Did not use the retrieved Narada example in 9.2 purport. Cited 10.11 Purport and mixed in the candala example from 9.32. Citation present; evidence choice not improved."
+      },
+      {
+        "id": "smoke_008",
+        "gold_chunk_in_top5": "YES",
+        "delta": "Preserved",
+        "step14": {"correctness": "Correct", "grounding": "Fully Grounded", "citation": "Correct", "section": "Correct"},
+        "step15": {"correctness": "Correct", "grounding": "Fully Grounded", "citation": "Missing", "section": "Correct"},
+        "notes": "Still Bharata / deer / next body a deer. Citation typed as 'Bhavad Gita 8.6, Purport' (typo), so validator MISSING."
+      },
+      {
+        "id": "smoke_009",
+        "gold_chunk_in_top5": "YES",
+        "delta": "Preserved",
+        "step14": {"correctness": "Correct", "grounding": "Fully Grounded", "citation": "Correct", "section": "Correct"},
+        "step15": {"correctness": "Correct", "grounding": "Fully Grounded", "citation": "Correct", "section": "Correct"}
+      },
+      {
+        "id": "smoke_010",
+        "gold_chunk_in_top5": "YES",
+        "delta": "Unchanged",
+        "step14": {"correctness": "Wrong", "grounding": "Unsupported", "citation": "Missing", "section": "Not Applicable"},
+        "step15": {"correctness": "Wrong", "grounding": "Partially Grounded", "citation": "Correct", "section": "Correct"},
+        "notes": "Still opens by saying evidence is insufficient. Then inverts 18.2: assigns giving-up-desire-based-activities to tyaga instead of sannyasa. Cites (Bhagavad Gita 18.2, Translation). Citation/section better; answer still wrong."
+      }
+    ]
+  },
+  "insufficient_context_control": {
+    "refused": true,
+    "hallucinated_2_47_teaching": false,
+    "invented_citation": true,
+    "step14_pass": true,
+    "step15_pass": false,
+    "step15_answer": "The retrieved evidence is insufficient to answer this question.\n\n(Bhagavad Gita 2.47, Translation)",
+    "notes": "Rule 6 refusal text appeared, then rule 7 citation requirement caused an unsupported 2.47 citation."
+  },
+  "previously_correct_step14": {
+    "ids": ["smoke_001", "smoke_002", "smoke_003", "smoke_004", "smoke_005", "smoke_006", "smoke_008", "smoke_009"],
+    "remained_correct": 7,
+    "regressed": ["smoke_005"]
+  },
+  "success_criteria": {
+    "previous_correct_mostly_preserved": true,
+    "007_improved": false,
+    "010_improved_answer": false,
+    "010_improved_citation": true,
+    "missing_citations_decreased": false,
+    "section_attribution_improved_on_002": true,
+    "insufficient_context_control_still_passes": false,
+    "unsupported_claims_did_not_increase_bucket": true,
+    "clearly_better_without_meaningful_regressions": false
+  },
+  "sanity_checks": {
+    "same_10_questions": true,
+    "same_control": true,
+    "same_e5_top5": true,
+    "context_text_matched_step14": true,
+    "same_1443_chunks": true,
+    "same_faiss": true,
+    "same_e5": true,
+    "same_qwen": true,
+    "same_num_ctx_8192": true,
+    "same_temperature_0": true,
+    "same_seed_0": true,
+    "same_max_output_512": true,
+    "no_retrieval_changes": true,
+    "no_few_shot": true,
+    "only_prompt_changed": true,
+    "previous_artifacts_preserved": true
+  }
+}

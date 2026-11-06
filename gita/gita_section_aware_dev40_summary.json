@@ -1,0 +1,561 @@
+{
+  "set_label": "development_40_former_holdout",
+  "scientific_status": "development_or_error_analysis_not_untouched_holdout",
+  "n_questions": 40,
+  "eval_sha256": "6fc70801e5863fb5661a727725847fd95380f7113b1230ac341aff5568f07e25",
+  "intent_counts": {
+    "translation": 8,
+    "neutral": 21,
+    "purport": 11
+  },
+  "e5": {
+    "source_level": {
+      "recall@1": 0.9,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr@10": 0.9458333333333334,
+      "n": 40
+    },
+    "chunk_level": {
+      "recall@1": 0.825,
+      "recall@5": 0.925,
+      "recall@10": 0.975,
+      "mrr@10": 0.8744444444444444,
+      "n": 40
+    }
+  },
+  "section_aware": {
+    "source_level": {
+      "recall@1": 0.9,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr@10": 0.9416666666666667,
+      "n": 40
+    },
+    "chunk_level": {
+      "recall@1": 0.85,
+      "recall@5": 0.975,
+      "recall@10": 0.975,
+      "mrr@10": 0.9008333333333333,
+      "n": 40
+    }
+  },
+  "exact_chunk_improved_ids": [
+    "gita_holdout_030",
+    "gita_holdout_032"
+  ],
+  "exact_chunk_regressed_ids": [
+    "gita_holdout_026"
+  ],
+  "source_regressed_ids": [
+    "gita_holdout_026"
+  ],
+  "source_ok_exact_miss_then_fixed_ids": [],
+  "by_intent": {
+    "neutral": {
+      "n": 21,
+      "e5": {
+        "source_level": {
+          "recall@1": 0.9047619047619048,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.9444444444444444,
+          "n": 21
+        },
+        "chunk_level": {
+          "recall@1": 0.8571428571428571,
+          "recall@5": 0.9523809523809523,
+          "recall@10": 0.9523809523809523,
+          "mrr@10": 0.8904761904761904,
+          "n": 21
+        }
+      },
+      "section_aware": {
+        "source_level": {
+          "recall@1": 0.9047619047619048,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.9444444444444444,
+          "n": 21
+        },
+        "chunk_level": {
+          "recall@1": 0.8571428571428571,
+          "recall@5": 0.9523809523809523,
+          "recall@10": 0.9523809523809523,
+          "mrr@10": 0.8904761904761904,
+          "n": 21
+        }
+      }
+    },
+    "purport": {
+      "n": 11,
+      "e5": {
+        "source_level": {
+          "recall@1": 0.8181818181818182,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.9090909090909091,
+          "n": 11
+        },
+        "chunk_level": {
+          "recall@1": 0.6363636363636364,
+          "recall@5": 0.8181818181818182,
+          "recall@10": 1.0,
+          "mrr@10": 0.7525252525252526,
+          "n": 11
+        }
+      },
+      "section_aware": {
+        "source_level": {
+          "recall@1": 0.8181818181818182,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.893939393939394,
+          "n": 11
+        },
+        "chunk_level": {
+          "recall@1": 0.7272727272727273,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 0.8484848484848485,
+          "n": 11
+        }
+      }
+    },
+    "translation": {
+      "n": 8,
+      "e5": {
+        "source_level": {
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "n": 8
+        },
+        "chunk_level": {
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "n": 8
+        }
+      },
+      "section_aware": {
+        "source_level": {
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "n": 8
+        },
+        "chunk_level": {
+          "recall@1": 1.0,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mrr@10": 1.0,
+          "n": 8
+        }
+      }
+    }
+  },
+  "per_question_ranks": [
+    {
+      "id": "gita_holdout_001",
+      "intent": "translation",
+      "cues": [
+        "dotted_citation:4.34"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_002",
+      "intent": "translation",
+      "cues": [
+        "dotted_citation:6.35"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_003",
+      "intent": "translation",
+      "cues": [
+        "dotted_citation:7.7"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_004",
+      "intent": "translation",
+      "cues": [
+        "dotted_citation:9.22"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_005",
+      "intent": "translation",
+      "cues": [
+        "dotted_citation:10.8"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_006",
+      "intent": "translation",
+      "cues": [
+        "dotted_citation:12.8"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_007",
+      "intent": "translation",
+      "cues": [
+        "dotted_citation:17.15"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_008",
+      "intent": "translation",
+      "cues": [
+        "dotted_citation:18.61"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_009",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_010",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_011",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_012",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_013",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 3,
+      "sa_source": 3,
+      "e5_chunk": null,
+      "sa_chunk": null
+    },
+    {
+      "id": "gita_holdout_014",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 5,
+      "sa_chunk": 5
+    },
+    {
+      "id": "gita_holdout_015",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_016",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_017",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_018",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 2,
+      "sa_source": 2,
+      "e5_chunk": 2,
+      "sa_chunk": 2
+    },
+    {
+      "id": "gita_holdout_019",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_020",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_021",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_022",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_023",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_024",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_025",
+      "intent": "purport",
+      "cues": [
+        "commentary"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_026",
+      "intent": "purport",
+      "cues": [
+        "commentary"
+      ],
+      "e5_source": 2,
+      "sa_source": 3,
+      "e5_chunk": 2,
+      "sa_chunk": 3
+    },
+    {
+      "id": "gita_holdout_027",
+      "intent": "purport",
+      "cues": [
+        "commentary"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_028",
+      "intent": "purport",
+      "cues": [
+        "commentary"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_029",
+      "intent": "purport",
+      "cues": [
+        "commentary"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_030",
+      "intent": "purport",
+      "cues": [
+        "commentary"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 6,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_031",
+      "intent": "purport",
+      "cues": [
+        "commentary"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_032",
+      "intent": "purport",
+      "cues": [
+        "commentary"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 9,
+      "sa_chunk": 2
+    },
+    {
+      "id": "gita_holdout_033",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_034",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_035",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_036",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_037",
+      "intent": "purport",
+      "cues": [
+        "commentary"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_038",
+      "intent": "purport",
+      "cues": [
+        "commentary"
+      ],
+      "e5_source": 2,
+      "sa_source": 2,
+      "e5_chunk": 2,
+      "sa_chunk": 2
+    },
+    {
+      "id": "gita_holdout_039",
+      "intent": "neutral",
+      "cues": [],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    },
+    {
+      "id": "gita_holdout_040",
+      "intent": "purport",
+      "cues": [
+        "commentary"
+      ],
+      "e5_source": 1,
+      "sa_source": 1,
+      "e5_chunk": 1,
+      "sa_chunk": 1
+    }
+  ]
+}

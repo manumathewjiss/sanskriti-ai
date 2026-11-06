@@ -1,0 +1,1047 @@
+{
+  "eval_set": "held_out_40",
+  "heldout_sha256_before": "6fc70801e5863fb5661a727725847fd95380f7113b1230ac341aff5568f07e25",
+  "e5_faiss_sha256": "37d700068b23111285aad0ad90fe012a0e98fba780ebcd41b7cade5110c21ec0",
+  "rrf_k": 60,
+  "candidate_depth": 50,
+  "citation_regex": "\\b\\d{1,2}\\.\\d{1,3}\\b",
+  "n_questions": 40,
+  "n_routed_to_hybrid": 8,
+  "n_routed_to_e5": 32,
+  "systems": {
+    "e5": {
+      "source_level": {
+        "recall@1": 0.9,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.9458333333333334,
+        "n": 40
+      },
+      "chunk_level": {
+        "recall@1": 0.825,
+        "recall@5": 0.925,
+        "recall@10": 0.975,
+        "mrr@10": 0.8744444444444444,
+        "n": 40
+      }
+    },
+    "bm25": {
+      "source_level": {
+        "recall@1": 0.55,
+        "recall@5": 0.775,
+        "recall@10": 0.825,
+        "mrr@10": 0.6444444444444445,
+        "n": 40
+      },
+      "chunk_level": {
+        "recall@1": 0.525,
+        "recall@5": 0.7,
+        "recall@10": 0.75,
+        "mrr@10": 0.6027777777777777,
+        "n": 40
+      }
+    },
+    "rrf_hybrid": {
+      "source_level": {
+        "recall@1": 0.725,
+        "recall@5": 0.925,
+        "recall@10": 0.95,
+        "mrr@10": 0.8023611111111111,
+        "n": 40
+      },
+      "chunk_level": {
+        "recall@1": 0.625,
+        "recall@5": 0.85,
+        "recall@10": 0.925,
+        "mrr@10": 0.7252777777777778,
+        "n": 40
+      }
+    },
+    "citation_gated": {
+      "source_level": {
+        "recall@1": 0.9,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.9458333333333334,
+        "n": 40
+      },
+      "chunk_level": {
+        "recall@1": 0.825,
+        "recall@5": 0.925,
+        "recall@10": 0.975,
+        "mrr@10": 0.8744444444444444,
+        "n": 40
+      }
+    }
+  },
+  "four_way_source_level": {
+    "recall@1": {
+      "e5": 0.9,
+      "bm25": 0.55,
+      "rrf_hybrid": 0.725,
+      "citation_gated": 0.9
+    },
+    "recall@5": {
+      "e5": 1.0,
+      "bm25": 0.775,
+      "rrf_hybrid": 0.925,
+      "citation_gated": 1.0
+    },
+    "recall@10": {
+      "e5": 1.0,
+      "bm25": 0.825,
+      "rrf_hybrid": 0.95,
+      "citation_gated": 1.0
+    },
+    "mrr@10": {
+      "e5": 0.9458333333333334,
+      "bm25": 0.6444444444444445,
+      "rrf_hybrid": 0.8023611111111111,
+      "citation_gated": 0.9458333333333334
+    }
+  },
+  "four_way_chunk_level": {
+    "recall@1": {
+      "e5": 0.825,
+      "bm25": 0.525,
+      "rrf_hybrid": 0.625,
+      "citation_gated": 0.825
+    },
+    "recall@5": {
+      "e5": 0.925,
+      "bm25": 0.7,
+      "rrf_hybrid": 0.85,
+      "citation_gated": 0.925
+    },
+    "recall@10": {
+      "e5": 0.975,
+      "bm25": 0.75,
+      "rrf_hybrid": 0.925,
+      "citation_gated": 0.975
+    },
+    "mrr@10": {
+      "e5": 0.8744444444444444,
+      "bm25": 0.6027777777777777,
+      "rrf_hybrid": 0.7252777777777778,
+      "citation_gated": 0.8744444444444444
+    }
+  },
+  "source_level_by_category": {
+    "e5": {
+      "citation_lookup": {
+        "recall@1": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "n": 8
+      },
+      "conceptual": {
+        "recall@1": 0.875,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.9375,
+        "n": 8
+      },
+      "factual": {
+        "recall@1": 0.875,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.9166666666666666,
+        "n": 8
+      },
+      "purport": {
+        "recall@1": 0.875,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.9375,
+        "n": 8
+      },
+      "terminology": {
+        "recall@1": 0.875,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.9375,
+        "n": 8
+      }
+    },
+    "bm25": {
+      "citation_lookup": {
+        "recall@1": 0.875,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.9375,
+        "n": 8
+      },
+      "conceptual": {
+        "recall@1": 0.25,
+        "recall@5": 0.375,
+        "recall@10": 0.375,
+        "mrr@10": 0.3125,
+        "n": 8
+      },
+      "factual": {
+        "recall@1": 0.5,
+        "recall@5": 0.75,
+        "recall@10": 0.875,
+        "mrr@10": 0.6041666666666666,
+        "n": 8
+      },
+      "purport": {
+        "recall@1": 0.75,
+        "recall@5": 0.75,
+        "recall@10": 0.875,
+        "mrr@10": 0.7638888888888888,
+        "n": 8
+      },
+      "terminology": {
+        "recall@1": 0.375,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.6041666666666666,
+        "n": 8
+      }
+    },
+    "rrf_hybrid": {
+      "citation_lookup": {
+        "recall@1": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "n": 8
+      },
+      "conceptual": {
+        "recall@1": 0.375,
+        "recall@5": 0.75,
+        "recall@10": 0.875,
+        "mrr@10": 0.5013888888888889,
+        "n": 8
+      },
+      "factual": {
+        "recall@1": 0.625,
+        "recall@5": 0.875,
+        "recall@10": 0.875,
+        "mrr@10": 0.71875,
+        "n": 8
+      },
+      "purport": {
+        "recall@1": 0.75,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.8541666666666666,
+        "n": 8
+      },
+      "terminology": {
+        "recall@1": 0.875,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.9375,
+        "n": 8
+      }
+    },
+    "citation_gated": {
+      "citation_lookup": {
+        "recall@1": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 1.0,
+        "n": 8
+      },
+      "conceptual": {
+        "recall@1": 0.875,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.9375,
+        "n": 8
+      },
+      "factual": {
+        "recall@1": 0.875,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.9166666666666666,
+        "n": 8
+      },
+      "purport": {
+        "recall@1": 0.875,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.9375,
+        "n": 8
+      },
+      "terminology": {
+        "recall@1": 0.875,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.9375,
+        "n": 8
+      }
+    }
+  },
+  "source_level_by_difficulty": {
+    "e5": {
+      "easy": {
+        "recall@1": 0.9,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.9333333333333333,
+        "n": 10
+      },
+      "hard": {
+        "recall@1": 0.9166666666666666,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.9583333333333334,
+        "n": 12
+      },
+      "medium": {
+        "recall@1": 0.8888888888888888,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.9444444444444444,
+        "n": 18
+      }
+    },
+    "bm25": {
+      "easy": {
+        "recall@1": 0.6,
+        "recall@5": 0.8,
+        "recall@10": 0.8,
+        "mrr@10": 0.6833333333333333,
+        "n": 10
+      },
+      "hard": {
+        "recall@1": 0.4166666666666667,
+        "recall@5": 0.6666666666666666,
+        "recall@10": 0.75,
+        "mrr@10": 0.5300925925925926,
+        "n": 12
+      },
+      "medium": {
+        "recall@1": 0.6111111111111112,
+        "recall@5": 0.8333333333333334,
+        "recall@10": 0.8888888888888888,
+        "mrr@10": 0.6990740740740741,
+        "n": 18
+      }
+    },
+    "rrf_hybrid": {
+      "easy": {
+        "recall@1": 0.7,
+        "recall@5": 0.8,
+        "recall@10": 0.8,
+        "mrr@10": 0.75,
+        "n": 10
+      },
+      "hard": {
+        "recall@1": 0.6666666666666666,
+        "recall@5": 0.9166666666666666,
+        "recall@10": 1.0,
+        "mrr@10": 0.775925925925926,
+        "n": 12
+      },
+      "medium": {
+        "recall@1": 0.7777777777777778,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.8490740740740741,
+        "n": 18
+      }
+    },
+    "citation_gated": {
+      "easy": {
+        "recall@1": 0.9,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.9333333333333333,
+        "n": 10
+      },
+      "hard": {
+        "recall@1": 0.9166666666666666,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.9583333333333334,
+        "n": 12
+      },
+      "medium": {
+        "recall@1": 0.8888888888888888,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.9444444444444444,
+        "n": 18
+      }
+    }
+  },
+  "old_30_vs_holdout_40_source": {
+    "e5": {
+      "old_source": {
+        "recall@1": 0.7,
+        "recall@5": 0.8333333333333334,
+        "recall@10": 0.9666666666666667,
+        "mrr@10": 0.7729100529100529,
+        "n": 30
+      },
+      "holdout_source": {
+        "recall@1": 0.9,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.9458333333333334,
+        "n": 40
+      }
+    },
+    "bm25": {
+      "old_source": {
+        "recall@1": 0.4666666666666667,
+        "recall@5": 0.6333333333333333,
+        "recall@10": 0.8333333333333334,
+        "mrr@10": 0.5382804232804232,
+        "n": 30
+      },
+      "holdout_source": {
+        "recall@1": 0.55,
+        "recall@5": 0.775,
+        "recall@10": 0.825,
+        "mrr@10": 0.6444444444444445,
+        "n": 40
+      }
+    },
+    "rrf_hybrid": {
+      "old_source": {
+        "recall@1": 0.6666666666666666,
+        "recall@5": 0.8666666666666667,
+        "recall@10": 1.0,
+        "mrr@10": 0.7536507936507937,
+        "n": 30
+      },
+      "holdout_source": {
+        "recall@1": 0.725,
+        "recall@5": 0.925,
+        "recall@10": 0.95,
+        "mrr@10": 0.8023611111111111,
+        "n": 40
+      }
+    },
+    "citation_gated": {
+      "old_source": {
+        "recall@1": 0.7333333333333333,
+        "recall@5": 0.8666666666666667,
+        "recall@10": 1.0,
+        "mrr@10": 0.7979100529100529,
+        "n": 30
+      },
+      "holdout_source": {
+        "recall@1": 0.9,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mrr@10": 0.9458333333333334,
+        "n": 40
+      }
+    }
+  },
+  "all_systems_source_miss": [],
+  "gated_source_hit_exact_chunk_miss": [
+    "gita_holdout_013"
+  ],
+  "per_question_ranks": [
+    {
+      "id": "gita_holdout_001",
+      "category": "citation_lookup",
+      "difficulty": "easy",
+      "citation_detected": true,
+      "selected_retriever": "hybrid_rrf",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_002",
+      "category": "citation_lookup",
+      "difficulty": "medium",
+      "citation_detected": true,
+      "selected_retriever": "hybrid_rrf",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_003",
+      "category": "citation_lookup",
+      "difficulty": "easy",
+      "citation_detected": true,
+      "selected_retriever": "hybrid_rrf",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_004",
+      "category": "citation_lookup",
+      "difficulty": "medium",
+      "citation_detected": true,
+      "selected_retriever": "hybrid_rrf",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_005",
+      "category": "citation_lookup",
+      "difficulty": "easy",
+      "citation_detected": true,
+      "selected_retriever": "hybrid_rrf",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_006",
+      "category": "citation_lookup",
+      "difficulty": "easy",
+      "citation_detected": true,
+      "selected_retriever": "hybrid_rrf",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_007",
+      "category": "citation_lookup",
+      "difficulty": "medium",
+      "citation_detected": true,
+      "selected_retriever": "hybrid_rrf",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_008",
+      "category": "citation_lookup",
+      "difficulty": "hard",
+      "citation_detected": true,
+      "selected_retriever": "hybrid_rrf",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 2,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 2,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_009",
+      "category": "factual",
+      "difficulty": "easy",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": null,
+      "rrf_source_gold_rank": null,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": null,
+      "rrf_chunk_gold_rank": null,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_010",
+      "category": "factual",
+      "difficulty": "medium",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 3,
+      "rrf_source_gold_rank": 4,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": null,
+      "rrf_chunk_gold_rank": 6,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_011",
+      "category": "factual",
+      "difficulty": "medium",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_012",
+      "category": "factual",
+      "difficulty": "medium",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_013",
+      "category": "factual",
+      "difficulty": "easy",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 3,
+      "bm25_source_gold_rank": 3,
+      "rrf_source_gold_rank": 2,
+      "gated_source_gold_rank": 3,
+      "e5_chunk_gold_rank": null,
+      "bm25_chunk_gold_rank": null,
+      "rrf_chunk_gold_rank": null,
+      "gated_chunk_gold_rank": null
+    },
+    {
+      "id": "gita_holdout_014",
+      "category": "factual",
+      "difficulty": "hard",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 5,
+      "bm25_chunk_gold_rank": 2,
+      "rrf_chunk_gold_rank": 3,
+      "gated_chunk_gold_rank": 5
+    },
+    {
+      "id": "gita_holdout_015",
+      "category": "factual",
+      "difficulty": "medium",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 6,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 6,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_016",
+      "category": "factual",
+      "difficulty": "easy",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_017",
+      "category": "conceptual",
+      "difficulty": "hard",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": null,
+      "rrf_source_gold_rank": 5,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": null,
+      "rrf_chunk_gold_rank": 5,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_018",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 2,
+      "bm25_source_gold_rank": 2,
+      "rrf_source_gold_rank": 2,
+      "gated_source_gold_rank": 2,
+      "e5_chunk_gold_rank": 2,
+      "bm25_chunk_gold_rank": 2,
+      "rrf_chunk_gold_rank": 2,
+      "gated_chunk_gold_rank": 2
+    },
+    {
+      "id": "gita_holdout_019",
+      "category": "conceptual",
+      "difficulty": "hard",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": null,
+      "rrf_source_gold_rank": 9,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": null,
+      "rrf_chunk_gold_rank": 9,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_020",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_021",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_022",
+      "category": "conceptual",
+      "difficulty": "hard",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": null,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": null,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_023",
+      "category": "conceptual",
+      "difficulty": "medium",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": null,
+      "rrf_source_gold_rank": 5,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": null,
+      "rrf_chunk_gold_rank": 5,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_024",
+      "category": "conceptual",
+      "difficulty": "easy",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": null,
+      "rrf_source_gold_rank": null,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": null,
+      "rrf_chunk_gold_rank": null,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_025",
+      "category": "purport",
+      "difficulty": "medium",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_026",
+      "category": "purport",
+      "difficulty": "medium",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 2,
+      "bm25_source_gold_rank": null,
+      "rrf_source_gold_rank": 3,
+      "gated_source_gold_rank": 2,
+      "e5_chunk_gold_rank": 2,
+      "bm25_chunk_gold_rank": null,
+      "rrf_chunk_gold_rank": 3,
+      "gated_chunk_gold_rank": 2
+    },
+    {
+      "id": "gita_holdout_027",
+      "category": "purport",
+      "difficulty": "hard",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_028",
+      "category": "purport",
+      "difficulty": "hard",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 9,
+      "rrf_source_gold_rank": 2,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 9,
+      "rrf_chunk_gold_rank": 2,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_029",
+      "category": "purport",
+      "difficulty": "medium",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_030",
+      "category": "purport",
+      "difficulty": "hard",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 6,
+      "bm25_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 2,
+      "gated_chunk_gold_rank": 6
+    },
+    {
+      "id": "gita_holdout_031",
+      "category": "purport",
+      "difficulty": "medium",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_032",
+      "category": "purport",
+      "difficulty": "hard",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 9,
+      "bm25_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 2,
+      "gated_chunk_gold_rank": 9
+    },
+    {
+      "id": "gita_holdout_033",
+      "category": "terminology",
+      "difficulty": "easy",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 2,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 2,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_034",
+      "category": "terminology",
+      "difficulty": "easy",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_035",
+      "category": "terminology",
+      "difficulty": "medium",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 4,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 4,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_036",
+      "category": "terminology",
+      "difficulty": "medium",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 3,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 3,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_037",
+      "category": "terminology",
+      "difficulty": "hard",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 4,
+      "rrf_source_gold_rank": 2,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 4,
+      "rrf_chunk_gold_rank": 2,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_038",
+      "category": "terminology",
+      "difficulty": "hard",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 2,
+      "bm25_source_gold_rank": 2,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 2,
+      "e5_chunk_gold_rank": 2,
+      "bm25_chunk_gold_rank": null,
+      "rrf_chunk_gold_rank": 6,
+      "gated_chunk_gold_rank": 2
+    },
+    {
+      "id": "gita_holdout_039",
+      "category": "terminology",
+      "difficulty": "medium",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    },
+    {
+      "id": "gita_holdout_040",
+      "category": "terminology",
+      "difficulty": "hard",
+      "citation_detected": false,
+      "selected_retriever": "e5",
+      "e5_source_gold_rank": 1,
+      "bm25_source_gold_rank": 1,
+      "rrf_source_gold_rank": 1,
+      "gated_source_gold_rank": 1,
+      "e5_chunk_gold_rank": 1,
+      "bm25_chunk_gold_rank": 1,
+      "rrf_chunk_gold_rank": 1,
+      "gated_chunk_gold_rank": 1
+    }
+  ],
+  "architecture_frozen": true,
+  "no_tuning_after_holdout": true
+}
